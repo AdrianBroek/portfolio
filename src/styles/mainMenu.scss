@@ -73,3 +73,40 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+.icons {
+    position: relative;
+    .iconContainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        transition: .3s ease;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 8px rgba(128, 124, 124, 0.2);
+        .icon {
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(133deg) brightness(109%) contrast(101%);
+            height: 112%;
+            width: 112%; 
+            animation: popup 1s ease;
+        }
+    }
+}
+
+@keyframes popup{
+    0%{
+        transform: scale(1)
+    }
+    15%{
+        transform: scale(1.25)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
+

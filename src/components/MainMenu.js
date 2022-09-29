@@ -1,13 +1,19 @@
 import React, {useContext, useEffect, useState} from "react"    
 import StateContext from './StateContext';
 
+//icons
+import user from '../images/icons/user.png'
+import phone from '../images/icons/phone.png'
+import develop from '../images/icons/develop.png'
+import projects from '../images/icons/setting.png'
+
 const MainMenu = () => {
     const {active, setActive} = useContext(StateContext)
     const [rotate, setRotate] = useState('0deg')
     const [classCheck, setClassCheck] = useState()
     const [hover, setHover] = useState()
     const [borderChange, setBorderChange] = useState()
-    
+
     useEffect(()=> {
         switch(classCheck){
             case 'st':
@@ -76,6 +82,28 @@ const MainMenu = () => {
                 </div>
                 <div onMouseEnter={() => setHover('th')} onClick={(e) => activeHandler(e)} className="item th active">
                     <h1>Contact</h1>
+                </div>
+                <div className="icons">
+                    {classCheck == 'st' && (
+                        <div className="iconContainer" >
+                            <img className="icon user" src={user} />
+                        </div>
+                    )}
+                    {classCheck == 'sec' && (
+                        <div className="iconContainer" >
+                            <img className="icon dev" src={develop} />
+                        </div>
+                    )}
+                    {classCheck == 'rd' && (
+                        <div className="iconContainer" >
+                            <img className="icon pro" src={projects} />
+                        </div>
+                    )}
+                    {classCheck == 'th' && (
+                        <div className="iconContainer" >
+                            <img className="icon phn" src={phone} />
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
