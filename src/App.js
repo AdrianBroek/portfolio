@@ -5,12 +5,17 @@ import './styles/app.scss'
 import { StateProvider } from './components/StateContext';
 // components
 import MainMenu from './components/MainMenu'
+// pages
+import AboutMe from './pages/AboutMe'
+import Skillset from './pages/Skillset'
 
 function App() {
 
   return (
     <StateProvider>
       <MainMenu />
+      <AboutMe />
+      <Skillset />
     </StateProvider>
   );
 }

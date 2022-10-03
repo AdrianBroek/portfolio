@@ -1,0 +1,85 @@
+.skillset {
+
+    .st {
+        .tables {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 1rem;
+            h1 {
+                font-size: 5rem;
+            }
+            div{
+                border-radius: .75rem;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                text-align: center;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+            .html {
+                width: 95%;
+                background-color: #DD4B25;
+            }
+            .css {
+                width: 90%;
+                background-color: #2449D8;
+            }
+            .js {
+                width: 85%;
+                background-color: #E4CF4C;
+            }
+            .react {
+                width: 60%;
+                background-color: #46CAF2;
+            }
+            .api {
+                width: 20%;
+                background-color: #7EAF0F;
+            }
+            .node {
+                width: 20%;
+                background-color: #7EAF0F;
+            }
+            .graph {
+                width: 20%;
+                background-color: #D932A2;
+                span {
+                    font-size: 1rem;
+                }
+            }
+            .wp {
+                width: 20%;
+                background-color: #1F6F93;
+            }
+            .tpl {
+                width: 25%;
+                background-color: #EBB833;
+            }
+            .ps {
+                width: 40%;
+                background-color: #281143;
+            }
+            .sql {
+                width: 35%;
+                background: rgb(0,97,138);
+                background: linear-gradient(90deg, rgba(0,97,138,1) 16%, rgba(228,142,0,1) 70%);
+            }
+            .php {
+                width: 10%;
+                background-color: #777BB3;
+            }
+            .others {
+                width: 50%;
+                background: rgb(105,105,105);
+                background: linear-gradient(90deg, rgba(105,105,105,1) 16%, rgba(197,197,197,1) 70%);
+            }
+        }
+    }
+}

@@ -17,19 +17,15 @@ const MainMenu = () => {
     useEffect(()=> {
         switch(classCheck){
             case 'st':
-                console.log('st')
                 setRotate('0deg')
                 break;
             case 'sec':
-                console.log('sec')
                 setRotate('270deg')
                 break;
             case 'rd':
-                console.log('rd')
                 setRotate('90deg')
                 break;
             case 'th':
-                console.log('th')
                 setRotate('180deg')
                 break;
         }
@@ -37,7 +33,6 @@ const MainMenu = () => {
 
     const activeHandler = (e) => {
         setClassCheck(e.target.parentNode.classList[1])
-        // console.log(classCheck)
         if (active){
             setActive(false)
             setTimeout(()=> {
@@ -46,6 +41,17 @@ const MainMenu = () => {
         }else {
             setActive(true)
         }
+    }
+    const [link, setLink] = useState()
+
+    useEffect(()=> {
+        console.log(link)
+    }, [link])
+
+    const linkHandler = (e) => {
+        const el = document.querySelector('#aboutMe')
+        setLink(e.target.parentNode.classList[1])
+        console.log(link)
     }
 
     useEffect(() =>{      
@@ -68,20 +74,20 @@ const MainMenu = () => {
 
     return (
         <section className="menu">
-            <div className="container">
+            <div className="item-container">
                 <div style={{borderColor: borderChange}} className="subContainerHover"></div>
                 <div style={{rotate: rotate}} className="subContainerPicked"></div>
                 <div onMouseEnter={() => setHover('st')} onClick={(e) => activeHandler(e)} className="item st">
-                    <h1>About me</h1>
+                    <h1 onClick={(e) => linkHandler(e)}>About me</h1>
                 </div>
                 <div onMouseEnter={() => setHover('sec')} onClick={(e) => activeHandler(e)} className="item sec subActive">
-                    <h1>Skillset</h1>
+                    <h1 onClick={(e) => linkHandler(e)}>Skillset</h1>
                 </div>
                 <div onMouseEnter={() => setHover('rd')} onClick={(e) => activeHandler(e)} className="item rd subActive">
-                    <h1>Projects</h1>
+                    <h1 onClick={(e) => linkHandler(e)}>Projects</h1>
                 </div>
                 <div onMouseEnter={() => setHover('th')} onClick={(e) => activeHandler(e)} className="item th active">
-                    <h1>Contact</h1>
+                    <h1 onClick={(e) => linkHandler(e)}>Contact</h1>
                 </div>
                 <div className="icons">
                     {classCheck == 'st' && (

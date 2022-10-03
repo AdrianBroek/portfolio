@@ -1,4 +1,5 @@
 body {
+  box-sizing: border-box;
   font-family: 'Teko', sans-serif;
   min-height: 100vh;
   height: 100%;
@@ -9,6 +10,22 @@ body {
   // -webkit-animation: AnimatedGradient 30s ease infinite;
   // -moz-animation: AnimatedGradient 30s ease infinite;
   animation: AnimatedGradient 3s ease infinite;
+}
+
+.container {
+  padding: 2rem 5rem;
+  max-width: 1640px;
+  margin: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+p {
+  font-weight: 300;
 }
 
 @-webkit-keyframes AnimatedGradient {
@@ -27,4 +44,6 @@ body {
   100%{background-position:0% 61%}
 }
 
-@import 'mainMenu'
+@import 'mainMenu';
+@import 'aboutMe';
+@import 'skillset';
