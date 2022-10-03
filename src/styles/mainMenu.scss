@@ -17,6 +17,44 @@
         align-items: center;
         justify-content: center;
         border: 1px solid rgba(223, 223, 223, 0.548);
+        &.changed {
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5.6px);
+            -webkit-backdrop-filter: blur(5.6px);
+            position: fixed;
+            top: 2%;
+            right: 2%;
+            height: 200px;
+            width: 200px;
+            .icons {
+                .iconContainer {
+                    width: 35px;
+                    height: 35px
+                }
+            }
+            .item {
+                h1 {
+                    padding: .0rem;
+                    font-size: 1rem;
+                }
+                &.st {
+                    top: 10%;
+                }
+                &.sec {
+                    left: 10%;
+                    transform: translate(-10%, -50%);
+                }
+                &.rd {
+                    right: 10%;
+                    transform: translate(10%, -50%);
+                }
+                &.th {
+                    bottom: 10%;
+                }
+            }
+        }
         .item {
             position: absolute;
             cursor: pointer;

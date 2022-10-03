@@ -23,62 +23,112 @@
                     font-size: 1.5rem;
                 }
             }
+            .widthChanger {
+                transition: .6s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            } 
             .html {
                 width: 95%;
-                background-color: #DD4B25;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {
+                    background-color: #DD4B25;
+                }   
             }
             .css {
                 width: 90%;
-                background-color: #2449D8;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {
+                    background-color: #2449D8;
+                }
             }
             .js {
                 width: 85%;
-                background-color: #E4CF4C;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger { background-color: #E4CF4C;}
+               
             }
             .react {
                 width: 60%;
-                background-color: #46CAF2;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {background-color: #46CAF2;}
+                
             }
             .api {
                 width: 20%;
-                background-color: #7EAF0F;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {background-color: #7EAF0F;}
+                
             }
             .node {
                 width: 20%;
-                background-color: #7EAF0F;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {background-color: #7EAF0F;}
+                
             }
             .graph {
                 width: 20%;
-                background-color: #D932A2;
+                display: flex;
+                justify-content: flex-start;
+                
                 span {
                     font-size: 1rem;
                 }
+                .widthChanger {background-color: #D932A2;}
             }
             .wp {
                 width: 20%;
-                background-color: #1F6F93;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {background-color: #1F6F93;}
+                
             }
             .tpl {
                 width: 25%;
-                background-color: #EBB833;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {background-color: #EBB833;}
+                
             }
             .ps {
                 width: 40%;
-                background-color: #281143;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {background-color: #281143;}
+                
             }
             .sql {
                 width: 35%;
-                background: rgb(0,97,138);
-                background: linear-gradient(90deg, rgba(0,97,138,1) 16%, rgba(228,142,0,1) 70%);
+                display: flex;
+                justify-content: flex-start;
+                
+                .widthChanger {
+                    background: rgb(0,97,138);
+                    background: linear-gradient(90deg, rgba(0,97,138,1) 16%, rgba(228,142,0,1) 70%);
+                }
             }
             .php {
                 width: 10%;
-                background-color: #777BB3;
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {
+                    background-color: #777BB3;
+                    min-width: 100px;
+                }
             }
             .others {
                 width: 50%;
-                background: rgb(105,105,105);
-                background: linear-gradient(90deg, rgba(105,105,105,1) 16%, rgba(197,197,197,1) 70%);
+                display: flex;
+                justify-content: flex-start;
+                .widthChanger {
+                    background: rgb(105,105,105);
+                    background: linear-gradient(90deg, rgba(105,105,105,1) 16%, rgba(197,197,197,1) 70%);   
+                }
+                
             }
         }
     }

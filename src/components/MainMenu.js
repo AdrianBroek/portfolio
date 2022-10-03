@@ -8,11 +8,18 @@ import develop from '../images/icons/develop.png'
 import projects from '../images/icons/setting.png'
 
 const MainMenu = () => {
-    const {active, setActive} = useContext(StateContext)
+    const {active, setActive, scrollPos} = useContext(StateContext)
     const [rotate, setRotate] = useState('0deg')
     const [classCheck, setClassCheck] = useState()
     const [hover, setHover] = useState()
     const [borderChange, setBorderChange] = useState()
+    const [changePosition, setChangePosition] = useState(false)
+
+    useEffect(()=> {
+        
+        scrollPos >= 300 ? setChangePosition(true) : setChangePosition(false)
+        console.log({scrollPos, changePosition})    
+    }, [scrollPos])
 
     useEffect(()=> {
         switch(classCheck){
@@ -74,7 +81,7 @@ const MainMenu = () => {
 
     return (
         <section className="menu">
-            <div className="item-container">
+            <div className={changePosition ? "item-container changed" : "item-container"}>
                 <div style={{borderColor: borderChange}} className="subContainerHover"></div>
                 <div style={{rotate: rotate}} className="subContainerPicked"></div>
                 <div onMouseEnter={() => setHover('st')} onClick={(e) => activeHandler(e)} className="item st">

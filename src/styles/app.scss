@@ -3,13 +3,8 @@ body {
   font-family: 'Teko', sans-serif;
   min-height: 100vh;
   height: 100%;
-  // background: #0f0c29;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #111111, #202020, #0f0f0f);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #111111, #252323, #0f0f0f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  // background-size: 600% 600%;
-  // -webkit-animation: AnimatedGradient 30s ease infinite;
-  // -moz-animation: AnimatedGradient 30s ease infinite;
-  animation: AnimatedGradient 3s ease infinite;
 }
 
 .container {
@@ -26,22 +21,6 @@ body {
 
 p {
   font-weight: 300;
-}
-
-@-webkit-keyframes AnimatedGradient {
-  0%{background-position:0% 61%}
-  50%{background-position:100% 40%}
-  100%{background-position:0% 61%}
-}
-@-moz-keyframes AnimatedGradient {
-  0%{background-position:0% 61%}
-  50%{background-position:100% 40%}
-  100%{background-position:0% 61%}
-}
-@keyframes AnimatedGradient {
-  0%{background-position:0% 61%}
-  50%{background-position:100% 40%}
-  100%{background-position:0% 61%}
 }
 
 @import 'mainMenu';
