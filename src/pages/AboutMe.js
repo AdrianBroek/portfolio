@@ -5,28 +5,30 @@ import { useInView } from 'react-intersection-observer';
 
 const About = () => {
     const {scrollPos} = useContext(StateContext)
-    const [words, setWords] = useState([''])
+    const [words, setWords] = useState([])
     const { ref, inView, entry } = useInView({
         /* Optional options */
         threshold: 0,
-
     });
 
     let word = 'Adrian Brożek'
     const splitedWord = word.split('')
 
     function addWord() {
-        for(let i=0; i <= splitedWord.length+1; i++){
-            setTimeout(function timer() {
-                setWords(current => [...current, splitedWord[i]])
-            }, i * 80);
-        }
-        console.log(words)
-    }
+        if (words.length < 1){
+            for(let i=0; i < splitedWord.length; i++){
+                setTimeout(function timer() {
+                    setWords(current => [...current, splitedWord[i]])
+                }, i * 80);
+            }
+        }else {
 
+        }
+
+    }
+    
     useEffect(()=> {
-        setWords([''])
-        addWord()
+        inView ? addWord() : setWords([])
     }, [inView])
 
     return (
