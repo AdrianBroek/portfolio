@@ -1,28 +1,36 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import avatar from '../images/avatar/maleavatar.webp'
+import StateContext from '../components/StateContext'
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
-
-    const line = useRef()
-
+    const {scrollPos} = useContext(StateContext)
     const [words, setWords] = useState([''])
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0,
 
-    
+    });
 
-    function addWord(){
+    let word = 'Adrian Brożek'
+    const splitedWord = word.split('')
 
-        let word = 'Adrian Brożek'
-        const splitedWord = word.split('')
-
-        for(let i=0; i<=splitedWord.length; i++){
+    function addWord() {
+        for(let i=0; i <= splitedWord.length+1; i++){
             setTimeout(function timer() {
                 setWords(current => [...current, splitedWord[i]])
-            }, i * 150);
+            }, i * 80);
         }
+        console.log(words)
     }
 
+    useEffect(()=> {
+        setWords([''])
+        addWord()
+    }, [inView])
+
     return (
-        <section id="aboutMe" className="aboutMe container">
+        <section ref={ref} id="aboutMe" className="aboutMe container">
             <div className="st">
                 <div>
                     <h2>Hi, my name is</h2>
@@ -42,10 +50,9 @@ const About = () => {
                     <p>Hello, I'm frontend developer with almost 1 year of professional experience and about 3 years of 'hobby' expierience. </p>
                     <p>I started my web dev journey with IT technician degree in Poland, then I constantly learned new things or had fun with building my own apps.</p>
                     <p>Im currently looking forward to get hired in company that I could help with design and web apps/sites building.</p>
-                    <p>"Never stop learning"</p>
+                    <p>"Never stop learning!"</p>
                 </div>
             </div>
-        <button onClick={addWord} />
         </section>
     )
 }

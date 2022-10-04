@@ -1,10 +1,12 @@
 import React, {useState, useContext, useEffect} from "react";
 import StateContext from '../components/StateContext';
-
+import arrow from '../images/icons/arrow.png'
 const Skillset = () => {
     const {scrollPos} = useContext(StateContext)
     const [grow, setGrow] = useState('20%')
-
+    const [open1, setOpen1] = useState(false)
+    const [open2, setOpen2] = useState(false)
+    const [open3, setOpen3] = useState(false)
     useEffect(()=> {
         // console.log(scrollPos)
         scrollPos > 1250 ? setGrow('100%') : setGrow('20%')
@@ -16,73 +18,113 @@ const Skillset = () => {
             <div className="st">
                 <div className="tables">
                     <h1>Skillset</h1>
-                    <div className="html">
+                    <div className="skill html">
                         <div className="widthChanger" style={{width: grow}}>
                             <p>HTML5</p>
                         </div>
                     </div>
-                    <div className="css">
+                    <div className="skill css">
                         <div className="widthChanger" style={{width: grow}}>
                             <p>CSS/SASS</p>
                         </div>
                     </div>
-                    <div className="js">
+                    <div className="skill js">
                         
                         <div className="widthChanger" style={{width: grow}}>
                             <p>JavaScript ECMA6</p>
                         </div>
                     </div>
-                    <div className="react">
+                    <div className="skill react" onClick={() => setOpen1(!open1)}>
                         <div className="widthChanger" style={{width: grow}}>
-                            <p>React.js<span> (w/ router, framer-motion, styled-components, context, hooks, axios)</span></p>
-
+                            <div className="descContainer">
+                                <p>React.js</p>
+                                <div className="arrowContainer">
+                                    <img className={open1 ? 'open' : ''} src={arrow}/>
+                                </div>
+                                {open1 && (
+                                    <div className="desc">
+                                        <ul>
+                                            <li>Router</li>
+                                            <li>framer-motion</li>
+                                            <li>styled-components</li>
+                                            <li>context</li>
+                                            <li>hooks</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
-                    <div className="api">
+                    <div className="skill api">
                         
-                        <div className="widthChanger" style={{width: grow}}>
+                        <div className="widthChanger" style={{width: grow}} onClick={() => setOpen2(!open2)}>
+                        <div className="descContainer">
                             <p>REST API</p>
+                            <div className="arrowContainer">
+                                    <img className={open2 ? 'open' : ''} src={arrow}/>
+                                </div>
+                                {open2 && (
+                                    <div className="desc">
+                                        <ul>
+                                            <li>Fetch</li>
+                                            <li>Axios</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     </div>
-                    <div className="node">
+                    <div className="skill node">
                         <div className="widthChanger" style={{width: grow}}>
                             <p>Node.js</p>
                         </div>
                         
                     </div>
-                    <div className="wp">
+                    <div className="skill wp">
                         <div className="widthChanger" style={{width: grow}}>
                             <p>Wordpress</p>
                         </div>
                         
                     </div>
-                    <div className="tpl">
+                    <div className="skill tpl">
                         
                         <div className="widthChanger" style={{width: grow}}>
                             <p>Smarty + TPL</p>
                         </div>
                     </div>
-                    <div className="ps">
+                    <div className="skill ps">
                         
                         <div className="widthChanger" style={{width: grow}}>
                             <p>Prestashop</p>
                         </div>
                     </div>
-                    <div className="sql">
+                    <div className="skill sql">
                         
                         <div className="widthChanger" style={{width: grow}}>
                             <p>MySql</p>
                         </div>
                     </div>
-                    <div className="php">
+                    <div className="skill php">
                         
                         <div className="widthChanger" style={{width: grow}}>
                             <p>php</p>
                         </div>
                     </div>
-                    <div className="graph">
-                        <div className="widthChanger" style={{width: grow}}>
-                            <p>GraphQl <span>(/w hyGraph)</span></p>
+                    <div className="skill graph">
+                        <div className="widthChanger" style={{width: grow}} onClick={() => setOpen3(!open3)}>
+                            <div className="descContainer">
+                                <p>GraphQl</p>
+                                <div className="arrowContainer">
+                                        <img className={open3 ? 'open' : ''} src={arrow}/>
+                                </div>
+                                {open3 && (
+                                    <div className="desc">
+                                        <ul>
+                                            <li>HyGraph</li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
                         </div>
 
                     </div>

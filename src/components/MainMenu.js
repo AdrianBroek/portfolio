@@ -16,9 +16,7 @@ const MainMenu = () => {
     const [changePosition, setChangePosition] = useState(false)
 
     useEffect(()=> {
-        
-        scrollPos >= 300 ? setChangePosition(true) : setChangePosition(false)
-        console.log({scrollPos, changePosition})    
+        scrollPos >= 300 ? setChangePosition(true) : setChangePosition(false)  
     }, [scrollPos])
 
     useEffect(()=> {
@@ -51,14 +49,8 @@ const MainMenu = () => {
     }
     const [link, setLink] = useState()
 
-    useEffect(()=> {
-        console.log(link)
-    }, [link])
-
     const linkHandler = (e) => {
-        const el = document.querySelector('#aboutMe')
         setLink(e.target.parentNode.classList[1])
-        console.log(link)
     }
 
     useEffect(() =>{      

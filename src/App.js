@@ -10,7 +10,9 @@ import AboutMe from './pages/AboutMe'
 import Skillset from './pages/Skillset'
 
 function App() {
-
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
   return (
     <StateProvider>
       <MainMenu />
