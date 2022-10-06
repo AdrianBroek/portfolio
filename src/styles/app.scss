@@ -10,8 +10,21 @@ body {
 .container {
   padding: 2rem 5rem;
   max-width: 1640px;
-  margin: 2rem;
+  margin: 2rem auto;
+  @media screen and (max-width: 1024px) {
+    padding: 2rem;
+    margin: 1rem;
+  }
 }
+
+.style {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1.name {font-size: 5rem;}
 
 * {
   margin: 0;
@@ -26,3 +39,4 @@ p {
 @import 'mainMenu';
 @import 'aboutMe';
 @import 'skillset';
+@import 'projects'

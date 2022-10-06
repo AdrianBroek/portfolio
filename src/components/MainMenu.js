@@ -14,6 +14,13 @@ const MainMenu = () => {
     const [hover, setHover] = useState()
     const [borderChange, setBorderChange] = useState()
     const [changePosition, setChangePosition] = useState(false)
+    // const [window, setWindow] = useState(window.innerWidth)
+
+    // if (window.innerWidth <= 501){
+    //     window.addEventListener('resize', ()=> {
+    //         console.log(window.innerWidth)
+    //     })
+    // }
 
     useEffect(()=> {
         scrollPos >= 300 ? setChangePosition(true) : setChangePosition(false)  

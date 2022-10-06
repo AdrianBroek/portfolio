@@ -8,6 +8,7 @@ import MainMenu from './components/MainMenu'
 // pages
 import AboutMe from './pages/AboutMe'
 import Skillset from './pages/Skillset'
+import Projects from './pages/Projects'
 
 function App() {
   window.onbeforeunload = function () {
@@ -18,6 +19,7 @@ function App() {
       <MainMenu />
       <AboutMe />
       <Skillset />
+      <Projects />
     </StateProvider>
   );
 }

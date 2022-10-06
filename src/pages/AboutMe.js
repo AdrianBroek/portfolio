@@ -1,13 +1,10 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import avatar from '../images/avatar/maleavatar.webp'
-import StateContext from '../components/StateContext'
 import { useInView } from 'react-intersection-observer';
 
 const About = () => {
-    const {scrollPos} = useContext(StateContext)
     const [words, setWords] = useState([])
-    const { ref, inView, entry } = useInView({
-        /* Optional options */
+    const { ref, inView } = useInView({
         threshold: 0,
     });
 
@@ -21,10 +18,7 @@ const About = () => {
                     setWords(current => [...current, splitedWord[i]])
                 }, i * 80);
             }
-        }else {
-
         }
-
     }
     
     useEffect(()=> {
@@ -32,7 +26,7 @@ const About = () => {
     }, [inView])
 
     return (
-        <section ref={ref} id="aboutMe" className="aboutMe container">
+        <section ref={ref} id="aboutMe" className="aboutMe container style">
             <div className="st">
                 <div>
                     <h2>Hi, my name is</h2>

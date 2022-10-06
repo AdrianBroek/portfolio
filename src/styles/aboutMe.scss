@@ -1,15 +1,10 @@
 .aboutMe {
-    background-color: #3B3B3B;
     border-radius: .5rem;
     box-shadow: rgba(105, 105, 105, 0.2) 0px 7px 29px 0px;
     display: grid;
     justify-content: space-around;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     .st {
         display: flex;
         flex-direction: column;
@@ -73,8 +68,10 @@
     }
     .rd {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
         .board {
             padding: 2rem 0;
             p {
@@ -100,4 +97,14 @@
 	100% {
 		transform: translatey(0px);
 	}
+}
+
+@media screen and (max-width: 1024px){
+    .aboutMe {
+        grid-template-columns: 100%;
+        .rd {
+            grid-column-start: unset;
+            grid-column-end: unset;
+        }
+    }
 }

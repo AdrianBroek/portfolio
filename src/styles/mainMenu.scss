@@ -133,8 +133,6 @@
     }
 }
 
-
-
 @keyframes popup{
     0%{
         transform: scale(1)
@@ -147,3 +145,20 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .menu {
+        .item-container {
+            height: 415px;
+            width: 415px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .menu {
+        .item-container {
+            width: 90vw;
+        }
+    }
+}

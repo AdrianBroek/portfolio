@@ -1,20 +1,24 @@
-import React, {useState, useContext, useEffect} from "react";
-import StateContext from '../components/StateContext';
+import React, {useState, useEffect} from "react";
 import arrow from '../images/icons/arrow.png'
+import { useInView } from 'react-intersection-observer';
+
 const Skillset = () => {
-    const {scrollPos} = useContext(StateContext)
+    const { ref, inView, entry } = useInView({
+        threshold: 0,
+    });
     const [grow, setGrow] = useState('20%')
     const [open1, setOpen1] = useState(false)
     const [open2, setOpen2] = useState(false)
     const [open3, setOpen3] = useState(false)
+    const [open4, setOpen4] = useState(false)
+    
     useEffect(()=> {
-        // console.log(scrollPos)
-        scrollPos > 1250 ? setGrow('100%') : setGrow('20%')
-    }, [scrollPos])
+        inView ? setGrow('100%') : setGrow('20%')
+    }, [inView])
 
     
     return (
-        <section className="skillset container">
+        <section ref={ref} className="skillset container">
             <div className="st">
                 <div className="tables">
                     <h1>Skillset</h1>
@@ -23,9 +27,22 @@ const Skillset = () => {
                             <p>HTML5</p>
                         </div>
                     </div>
-                    <div className="skill css">
+                    <div className="skill css" onClick={() => setOpen4(!open4)}>
                         <div className="widthChanger" style={{width: grow}}>
-                            <p>CSS/SASS</p>
+                            <div className="descContainer">
+                                <p>CSS</p>
+                                <div className="arrowContainer">
+                                    <img className={open4 ? 'open' : ''} src={arrow}/>
+                                </div>
+                                    {open4 && (
+                                        <div className="desc">
+                                            <ul>
+                                                <li>Sass/Scss</li>
+                                                <li>RWD</li>
+                                            </ul>
+                                        </div>
+                                    )}
+                            </div>
                         </div>
                     </div>
                     <div className="skill js">
@@ -58,19 +75,19 @@ const Skillset = () => {
                     <div className="skill api">
                         
                         <div className="widthChanger" style={{width: grow}} onClick={() => setOpen2(!open2)}>
-                        <div className="descContainer">
-                            <p>REST API</p>
-                            <div className="arrowContainer">
-                                    <img className={open2 ? 'open' : ''} src={arrow}/>
-                                </div>
-                                {open2 && (
-                                    <div className="desc">
-                                        <ul>
-                                            <li>Fetch</li>
-                                            <li>Axios</li>
-                                        </ul>
+                            <div className="descContainer">
+                                <p>REST API</p>
+                                <div className="arrowContainer">
+                                        <img className={open2 ? 'open' : ''} src={arrow}/>
                                     </div>
-                                )}
+                                    {open2 && (
+                                        <div className="desc">
+                                            <ul>
+                                                <li>Fetch</li>
+                                                <li>Axios</li>
+                                            </ul>
+                                        </div>
+                                    )}
                             </div>
                         </div>
                     </div>
