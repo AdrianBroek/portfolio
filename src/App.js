@@ -9,6 +9,7 @@ import MainMenu from './components/MainMenu'
 import AboutMe from './pages/AboutMe'
 import Skillset from './pages/Skillset'
 import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 
 function App() {
   window.onbeforeunload = function () {
@@ -20,6 +21,7 @@ function App() {
       <AboutMe />
       <Skillset />
       <Projects />
+      <Contact />
     </StateProvider>
   );
 }
