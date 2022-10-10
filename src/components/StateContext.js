@@ -10,16 +10,18 @@ export function StateProvider({children}){
             setScrollPos(scroll_position)
         }
     );
-
+    
     const [scrollPos, setScrollPos] = useState()
     const [active, setActive] = useState(false)
-
+    const [activeScroll, setActiveScroll] = useState()
 
     return (
         <StateContext.Provider value={{
             active,
             setActive,
-            scrollPos
+            scrollPos,
+            activeScroll,
+            setActiveScroll
         }}>
             {children}
         </StateContext.Provider>

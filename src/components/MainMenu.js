@@ -8,7 +8,7 @@ import develop from '../images/icons/develop.png'
 import projects from '../images/icons/setting.png'
 
 const MainMenu = () => {
-    const {active, setActive, scrollPos} = useContext(StateContext)
+    const {active, setActive, scrollPos, activeScroll, setActiveScroll} = useContext(StateContext)
     const [rotate, setRotate] = useState('0deg')
     const [classCheck, setClassCheck] = useState()
     const [hover, setHover] = useState()
@@ -21,6 +21,35 @@ const MainMenu = () => {
     //         console.log(window.innerWidth)
     //     })
     // }
+
+    useEffect(()=> {
+        switch(activeScroll){
+            case 'aboutMe':
+                setRotate('0deg')
+                break;
+            case 'skillset':
+                setRotate('90deg')
+                break;
+            case 'projects':
+                setRotate('180deg')
+                break;
+            case 'contact':
+                setRotate('270deg')
+                break;
+        }
+    }, [activeScroll])
+
+
+    function scroll(){
+        window.scrollTo({
+            top: 1216,
+            behavior: "smooth"
+        })
+    }
+
+    useEffect(()=> {
+        console.log(activeScroll)
+    }, [activeScroll])
 
     useEffect(()=> {
         scrollPos >= 300 ? setChangePosition(true) : setChangePosition(false)  
@@ -49,6 +78,7 @@ const MainMenu = () => {
             setActive(false)
             setTimeout(()=> {
                 setActive(true)
+                
             }, [])
         }else {
             setActive(true)
@@ -58,6 +88,7 @@ const MainMenu = () => {
 
     const linkHandler = (e) => {
         setLink(e.target.parentNode.classList[1])
+        console.log(link)
     }
 
     useEffect(() =>{      
@@ -84,16 +115,16 @@ const MainMenu = () => {
                 <div style={{borderColor: borderChange}} className="subContainerHover"></div>
                 <div style={{rotate: rotate}} className="subContainerPicked"></div>
                 <div onMouseEnter={() => setHover('st')} onClick={(e) => activeHandler(e)} className="item st">
-                    <h1 onClick={(e) => linkHandler(e)}>About me</h1>
+                    <a className="link" onClick={(e) => linkHandler(e)} href='#aboutMe'>About me</a>
                 </div>
-                <div onMouseEnter={() => setHover('sec')} onClick={(e) => activeHandler(e)} className="item sec subActive">
-                    <h1 onClick={(e) => linkHandler(e)}>Skillset</h1>
+                <div onMouseEnter={() => setHover('sec')} onClick={(e) => activeHandler(e)} className="item sec">
+                    <a className="link" onClick={(e) => linkHandler(e)} href='#contact'>Contact</a>
                 </div>
-                <div onMouseEnter={() => setHover('rd')} onClick={(e) => activeHandler(e)} className="item rd subActive">
-                    <h1 onClick={(e) => linkHandler(e)}>Projects</h1>
+                <div onMouseEnter={() => setHover('rd')} onClick={(e) => activeHandler(e)} className="item rd">
+                    <a className="link" onClick={(e) => linkHandler(e)} href='#skillset'>Skillset</a>
                 </div>
-                <div onMouseEnter={() => setHover('th')} onClick={(e) => activeHandler(e)} className="item th active">
-                    <h1 onClick={(e) => linkHandler(e)}>Contact</h1>
+                <div onMouseEnter={() => setHover('th')} onClick={(e) => activeHandler(e)} className="item th">
+                    <a className="link" onClick={(e) => linkHandler(e)} href='#projects'>Projects</a>
                 </div>
                 <div className="icons">
                     {classCheck == 'st' && (
@@ -103,17 +134,17 @@ const MainMenu = () => {
                     )}
                     {classCheck == 'sec' && (
                         <div className="iconContainer" >
-                            <img className="icon dev" src={develop} />
+                            <img className="icon dev" src={phone} />
                         </div>
                     )}
                     {classCheck == 'rd' && (
                         <div className="iconContainer" >
-                            <img className="icon pro" src={projects} />
+                            <img className="icon pro" src={develop} />
                         </div>
                     )}
                     {classCheck == 'th' && (
                         <div className="iconContainer" >
-                            <img className="icon phn" src={phone} />
+                            <img className="icon phn" src={projects} />
                         </div>
                     )}
                 </div>

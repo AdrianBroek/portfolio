@@ -27,13 +27,6 @@ const utilProjects = [
         backgroundColor: '#000'
     },
     {
-        name: 'Grupa Krawczyk',
-        description: 'Webstore made in Wordpress, style made from graphic designer project',
-        link: 'https://grupakrawczyk.pl/',
-        image: gk,
-        backgroundColor: '#000'
-    },
-    {
         name: 'Blucar',
         description: 'Webstore made in Wordpress, style made from graphic designer project, I had to use ACF',
         link: 'https://blucar.pl/',

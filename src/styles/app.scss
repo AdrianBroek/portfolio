@@ -6,6 +6,9 @@ body {
   background: -webkit-linear-gradient(to right, #111111, #202020, #0f0f0f);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #111111, #252323, #0f0f0f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+html{
+  scroll-behavior: smooth;
+}
 
 .container {
   padding: 2rem 5rem;
@@ -26,11 +29,12 @@ body {
 
 h1.name {font-size: 5rem;}
 
-* {
+* :not(path){
   margin: 0;
   padding: 0;
   color: #fff;
 }
+
 
 p {
   font-weight: 300;
@@ -39,4 +43,5 @@ p {
 @import 'mainMenu';
 @import 'aboutMe';
 @import 'skillset';
-@import 'projects'
+@import 'projects';
+@import 'contact'

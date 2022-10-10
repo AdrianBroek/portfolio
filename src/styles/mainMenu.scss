@@ -36,7 +36,8 @@
                 }
             }
             .item {
-                h1 {
+                
+                .link {
                     padding: .0rem;
                     font-size: 1rem;
                 }
@@ -59,12 +60,20 @@
         .item {
             position: absolute;
             cursor: pointer;
-            h1 {
+            .link {
+                display: block;
                 transition: .16s ease-in;
                 padding: 5rem;
                 white-space: nowrap;
+                font-size: 1.5rem;
+                text-decoration: none;
             }
-            &:hover h1{
+            // h1 {
+            //     transition: .16s ease-in;
+            //     padding: 5rem;
+            //     white-space: nowrap;
+            // }
+            &:hover .link{
                 transform: scale(1.15);
             }
             &.st {

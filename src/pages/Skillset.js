@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import arrow from '../images/icons/arrow.png'
 import { useInView } from 'react-intersection-observer';
+import StateContext from "../components/StateContext";
 
 const Skillset = () => {
+    const {activeScroll, setActiveScroll} = useContext(StateContext)
     const { ref, inView, entry } = useInView({
-        threshold: 0,
+        threshold: 0.4,
     });
     const [grow, setGrow] = useState('20%')
     const [open1, setOpen1] = useState(false)
@@ -12,13 +14,21 @@ const Skillset = () => {
     const [open3, setOpen3] = useState(false)
     const [open4, setOpen4] = useState(false)
     
+    useEffect(()=>{
+        if(inView){
+            const d = document.getElementById("aboutMe");
+            const topPos = d.offsetTop;
+            setActiveScroll('skillset')
+        }
+    }, [inView])
+
     useEffect(()=> {
         inView ? setGrow('100%') : setGrow('20%')
     }, [inView])
 
     
     return (
-        <section ref={ref} className="skillset container">
+        <section id="skillset" ref={ref} className="skillset container">
             <div className="st">
                 <div className="tables">
                     <h1>Skillset</h1>
@@ -38,6 +48,9 @@ const Skillset = () => {
                                         <div className="desc">
                                             <ul>
                                                 <li>Sass/Scss</li>
+                                                <li>Bootstrap</li>
+                                                <li>Flexbox</li>
+                                                <li>Grid</li>
                                                 <li>RWD</li>
                                             </ul>
                                         </div>

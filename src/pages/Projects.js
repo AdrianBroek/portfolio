@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import data from '../data'
 import utils from '../utils'
 import Project from '../components/Project'
+import { useInView } from 'react-intersection-observer';
+import StateContext from "../components/StateContext";
 
 const Projects = () => {
+    const {activeScroll, setActiveScroll} = useContext(StateContext)
     const [storage, setStorage] = useState(data)
     const [util, setUtil] = useState(utils)
+    const { ref, inView,  } = useInView({
+        threshold: 0.3,
+    });
+    
+    useEffect(()=>{
+        if(inView){
+            const d = document.getElementById("aboutMe");
+            const topPos = d.offsetTop;
+            // console.log(topPos)
+            setActiveScroll('projects')
+            // console.log(activeScroll)
+        }
+    }, [inView])
 
     return (
-        <section className="projects container">
+        <section id="projects" ref={ref} className="projects container">
             <h1 className="name">Projects</h1>
             <div className="projectContainer">
                 {storage.map((item, index)=> (

@@ -1,13 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import avatar from '../images/avatar/maleavatar.webp'
 import { useInView } from 'react-intersection-observer';
+import StateContext from "../components/StateContext";
 
 const About = () => {
+    const {activeScroll, setActiveScroll} = useContext(StateContext)
     const [words, setWords] = useState([])
-    const { ref, inView } = useInView({
+    const { ref, inView,  } = useInView({
         threshold: 0,
     });
 
+    // console.log(inView)
+    useEffect(()=>{
+        if(inView){
+            const d = document.getElementById("aboutMe");
+            const topPos = d.offsetTop;
+            // console.log(topPos)
+            setActiveScroll('aboutMe')
+            // console.log(activeScroll)
+        }
+    }, [inView])
+    
     let word = 'Adrian Brożek'
     const splitedWord = word.split('')
 
