@@ -39,18 +39,6 @@ const MainMenu = () => {
         }
     }, [activeScroll])
 
-
-    function scroll(){
-        window.scrollTo({
-            top: 1216,
-            behavior: "smooth"
-        })
-    }
-
-    useEffect(()=> {
-        console.log(activeScroll)
-    }, [activeScroll])
-
     useEffect(()=> {
         scrollPos >= 300 ? setChangePosition(true) : setChangePosition(false)  
     }, [scrollPos])
@@ -84,12 +72,6 @@ const MainMenu = () => {
             setActive(true)
         }
     }
-    const [link, setLink] = useState()
-
-    const linkHandler = (e) => {
-        setLink(e.target.parentNode.classList[1])
-        console.log(link)
-    }
 
     useEffect(() =>{      
         setBorderChange(hover)
@@ -115,16 +97,16 @@ const MainMenu = () => {
                 <div style={{borderColor: borderChange}} className="subContainerHover"></div>
                 <div style={{rotate: rotate}} className="subContainerPicked"></div>
                 <div onMouseEnter={() => setHover('st')} onClick={(e) => activeHandler(e)} className="item st">
-                    <a className="link" onClick={(e) => linkHandler(e)} href='#aboutMe'>About me</a>
+                    <a className="link" href='#aboutMe'>About me</a>
                 </div>
                 <div onMouseEnter={() => setHover('sec')} onClick={(e) => activeHandler(e)} className="item sec">
-                    <a className="link" onClick={(e) => linkHandler(e)} href='#contact'>Contact</a>
+                    <a className="link" href='#contact'>Contact</a>
                 </div>
                 <div onMouseEnter={() => setHover('rd')} onClick={(e) => activeHandler(e)} className="item rd">
-                    <a className="link" onClick={(e) => linkHandler(e)} href='#skillset'>Skillset</a>
+                    <a className="link" href='#skillset'>Skillset</a>
                 </div>
                 <div onMouseEnter={() => setHover('th')} onClick={(e) => activeHandler(e)} className="item th">
-                    <a className="link" onClick={(e) => linkHandler(e)} href='#projects'>Projects</a>
+                    <a className="link" href='#projects'>Projects</a>
                 </div>
                 <div className="icons">
                     {classCheck == 'st' && (
