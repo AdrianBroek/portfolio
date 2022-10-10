@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.1017857e.css",
+    "main.js": "/portfolio/static/js/main.27230d36.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/namileo.png": "/portfolio/static/media/namileo.8e898cdd92fa9a28bf6a.png",
+    "static/media/krawczykrental.png": "/portfolio/static/media/krawczykrental.6f543d4265a7cb24c6d6.png",
+    "static/media/ipomocni.png": "/portfolio/static/media/ipomocni.d65d2b5801695f2fc83e.png",
+    "static/media/grupakrawczyk.png": "/portfolio/static/media/grupakrawczyk.1a5d5c3c340a47a19379.png",
+    "static/media/blucar.png": "/portfolio/static/media/blucar.ecb441139055a18c9bbc.png",
+    "static/media/weatherApp.png": "/portfolio/static/media/weatherApp.9e0721d94955df3f9516.png",
+    "static/media/pajokWebsite.png": "/portfolio/static/media/pajokWebsite.f290317b51efb59e6e56.png",
+    "static/media/musicPlayer.png": "/portfolio/static/media/musicPlayer.6f9a67ec8677e7146924.png",
+    "static/media/calculator.png": "/portfolio/static/media/calculator.1562cf5cb72c8bbf7a08.png",
+    "static/media/todo.png": "/portfolio/static/media/todo.6d7652762838835ae014.png",
+    "static/media/colorsProject.png": "/portfolio/static/media/colorsProject.89b483eb5f75958f48f4.png",
+    "static/media/beatmaker.png": "/portfolio/static/media/beatmaker.d33cdd32d76319773a15.png",
+    "static/media/phone.png": "/portfolio/static/media/phone.facb82d6fff343fc7817.png",
+    "static/media/develop.png": "/portfolio/static/media/develop.938809252645902d50d7.png",
+    "static/media/user.png": "/portfolio/static/media/user.cee7ac9e8ca7a373309c.png",
+    "static/media/setting.png": "/portfolio/static/media/setting.75f8092750f6e0584d8e.png",
+    "static/media/paper-plane.png": "/portfolio/static/media/paper-plane.94969f8dc18ef9d88a57.png",
+    "static/media/arrow.png": "/portfolio/static/media/arrow.e59c7b0a4bcd4ab19c62.png",
+    "static/media/email.png": "/portfolio/static/media/email.51b08bcbb5af7a861c31.png",
+    "static/media/maleavatar.webp": "/portfolio/static/media/maleavatar.b93e6586ccd75c9f7952.webp",
+    "index.html": "/portfolio/index.html",
+    "main.1017857e.css.map": "/portfolio/static/css/main.1017857e.css.map",
+    "main.27230d36.js.map": "/portfolio/static/js/main.27230d36.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1017857e.css",
+    "static/js/main.27230d36.js"
+  ]
+}
