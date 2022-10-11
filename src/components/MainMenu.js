@@ -13,14 +13,20 @@ const MainMenu = () => {
     const [classCheck, setClassCheck] = useState()
     const [hover, setHover] = useState()
     const [borderChange, setBorderChange] = useState()
-    const [changePosition, setChangePosition] = useState(false)
-    // const [window, setWindow] = useState(window.innerWidth)
+    const [changePosition, setChangePosition] = useState(false);
+    const [height, setHeight] = useState()
+    const [changeCheck, setChangeCheck] = useState(false)
 
-    // if (window.innerWidth <= 501){
-    //     window.addEventListener('resize', ()=> {
-    //         console.log(window.innerWidth)
-    //     })
-    // }
+    useEffect(() => {
+        const container = document.querySelector('.item-container');
+        let containerWidth = container.offsetWidth
+        setHeight(containerWidth-2)
+        window.addEventListener('resize', ()=> {
+            const container = document.querySelector('.item-container');
+            let containerWidth = container.offsetWidth
+            setHeight(containerWidth-2)
+        })
+    }, [changePosition])
 
     useEffect(()=> {
         switch(activeScroll){
@@ -93,7 +99,7 @@ const MainMenu = () => {
 
     return (
         <section className="menu">
-            <div className={changePosition ? "item-container changed" : "item-container"}>
+            <div style={{height: height}} className={changePosition ? "item-container changed" : "item-container"}>
                 <div style={{borderColor: borderChange}} className="subContainerHover"></div>
                 <div style={{rotate: rotate}} className="subContainerPicked"></div>
                 <div onMouseEnter={() => setHover('st')} onClick={(e) => activeHandler(e)} className="item st">
