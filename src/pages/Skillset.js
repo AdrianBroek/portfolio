@@ -6,7 +6,7 @@ import StateContext from "../components/StateContext";
 const Skillset = () => {
     const {activeScroll, setActiveScroll} = useContext(StateContext)
     const { ref, inView, entry } = useInView({
-        threshold: 0.4,
+        threshold: 0,
     });
     const [grow, setGrow] = useState('20%')
     const [open1, setOpen1] = useState(false)
@@ -31,7 +31,7 @@ const Skillset = () => {
         <section id="skillset" ref={ref} className="skillset container">
             <div className="st">
                 <div className="tables">
-                    <h1>Skillset</h1>
+                    <h1 className="name">Skillset</h1>
                     <div className="skill html">
                         <div className="widthChanger" style={{width: grow}}>
                             <p>HTML5</p>

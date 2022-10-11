@@ -7,9 +7,6 @@
             flex-direction: column;
             align-items: flex-start;
             row-gap: 1rem;
-            h1 {
-                font-size: 5rem;
-            }
             .skill{
                 text-align: center;
                 min-height: 50px;
@@ -168,5 +165,11 @@
                 
             }
         }
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .skill {
+        overflow: hidden;
     }
 }

@@ -73,15 +73,17 @@
         grid-column-start: 1;
         grid-column-end: 3;
         .board {
+            font-family: 'Roboto';
             padding: 2rem 0;
             p {
                 font-size: 1.7rem;
             }
-            span {
-                font-size: 2.3rem;
-                font-weight: 600;
-            }
-           
+           .horizontal {
+            height: .5px;
+            width: 100%;
+            background-color: #fff;
+            margin: 2rem 0;
+           }
         }
     }
 }
@@ -109,6 +111,61 @@
         .rd {
             grid-column-start: unset;
             grid-column-end: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 501px){
+    .aboutMe {
+
+        .st {
+
+    
+            .name{
+                .cursor-block {
+                    &::before {
+
+                    }
+                }
+            }
+    
+            div {
+
+            }
+            h1, h2, h3 {
+                font-size: 13vw;
+            }
+            h1 {
+                font-size: 13vw;
+            }
+            h2 {
+                font-size: 9vw;
+            }
+            h3 {
+                font-size: 5vw;
+            }
+        }
+        .sec {
+            margin-top: 2rem;
+            .img {
+
+                img {
+                     width: 100%;
+                }
+            }
+        }
+        .rd {
+
+            .board {
+
+                p {
+                    font-size: 7vw;
+                }
+                span {
+
+                }
+               
+            }
         }
     }
 }

@@ -56,12 +56,15 @@ const About = () => {
             </div>
             <div className="rd">
                 <div className="board">
-                    <p><span>Short:</span> Hello, I'm frontend developer with almost 1 year of professional experience and about 3 years of formal/self taught expierience. </p>
-                    <p><span>Bio:</span> I started my web dev journey with IT technician degree in Poland, then I constantly gained new skills from online 
-                        courses. Meanwhile I've been practising my skills by building wep apps on my own.</p>
-                    <p>Im currently looking forward to get hired in company that I could help with design and web apps/sites building
+                    <p> Hello, I'm frontend developer with almost 1 year of professional experience and about 3 years of formal/self taught expierience. </p>
+                    <div className="horizontal" />
+                    <p>I started my web dev journey with IT technician degree in Poland, then I constantly gained new skills from online 
+                        courses. Meanwhile I've been practicing my skills by building wep apps on my own.</p>
+                    <div className="horizontal" />
+                    <p>Im currently looking forward to get hired in company that I could help with design and building web apps/sites 
                         and where I could increase my skills.</p>
-                    <p><span>Motto:</span> "Never stop learning!"</p>
+                    <div className="horizontal" />
+                    <p><b>"Never stop learning!"</b></p>
                 </div>
             </div>
         </section>

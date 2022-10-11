@@ -36,6 +36,9 @@
             background: none;
             font-family: "Roboto", sans-serif;
             font-size: 1.55rem;
+            &::placeholder {
+                font-size: 1rem;
+            }
         }
         .agreedment {
             display: flex;
@@ -143,5 +146,22 @@
             }
 
         }
+    }
+}
+
+
+@media screen and (max-width: 501px) {
+    .contact aside, .contact form {
+        padding: 2rem 0;
+
+    }
+    .contact aside div p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .contact aside div p {
+        font-size: .85rem;
     }
 }

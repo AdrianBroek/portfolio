@@ -10,16 +10,15 @@ const Projects = () => {
     const [storage, setStorage] = useState(data)
     const [util, setUtil] = useState(utils)
     const { ref, inView,  } = useInView({
-        threshold: 0.3,
+        threshold: 0.1,
     });
     
     useEffect(()=>{
         if(inView){
-            const d = document.getElementById("aboutMe");
+            const d = document.getElementById("projects");
             const topPos = d.offsetTop;
             // console.log(topPos)
             setActiveScroll('projects')
-            // console.log(activeScroll)
         }
     }, [inView])
 
