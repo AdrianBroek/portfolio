@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.85dd81b7.css",
-    "main.js": "/portfolio/static/js/main.8e8adee4.js",
+    "main.css": "/portfolio/static/css/main.52d95d6e.css",
+    "main.js": "/portfolio/static/js/main.bab28072.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/namileo.png": "/portfolio/static/media/namileo.8e898cdd92fa9a28bf6a.png",
     "static/media/krawczykrental.png": "/portfolio/static/media/krawczykrental.6f543d4265a7cb24c6d6.png",
     "static/media/ipomocni.png": "/portfolio/static/media/ipomocni.d65d2b5801695f2fc83e.png",
-    "static/media/grupakrawczyk.png": "/portfolio/static/media/grupakrawczyk.1a5d5c3c340a47a19379.png",
     "static/media/blucar.png": "/portfolio/static/media/blucar.ecb441139055a18c9bbc.png",
     "static/media/weatherApp.png": "/portfolio/static/media/weatherApp.9e0721d94955df3f9516.png",
     "static/media/pajokWebsite.png": "/portfolio/static/media/pajokWebsite.f290317b51efb59e6e56.png",
@@ -24,12 +23,12 @@
     "static/media/email.png": "/portfolio/static/media/email.51b08bcbb5af7a861c31.png",
     "static/media/maleavatar.webp": "/portfolio/static/media/maleavatar.b93e6586ccd75c9f7952.webp",
     "index.html": "/portfolio/index.html",
-    "main.85dd81b7.css.map": "/portfolio/static/css/main.85dd81b7.css.map",
-    "main.8e8adee4.js.map": "/portfolio/static/js/main.8e8adee4.js.map",
+    "main.52d95d6e.css.map": "/portfolio/static/css/main.52d95d6e.css.map",
+    "main.bab28072.js.map": "/portfolio/static/js/main.bab28072.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.85dd81b7.css",
-    "static/js/main.8e8adee4.js"
+    "static/css/main.52d95d6e.css",
+    "static/js/main.bab28072.js"
   ]
 }
