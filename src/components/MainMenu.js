@@ -31,9 +31,9 @@ const MainMenu = () => {
     useEffect(()=> {
         switch(activeScroll){
             case 'aboutMe':
-                setRotate('0deg')
+            setRotate('0deg')
                 break;
-            case 'skillset':
+                case 'skillset':
                 setRotate('90deg')
                 break;
             case 'projects':
@@ -43,7 +43,7 @@ const MainMenu = () => {
                 setRotate('270deg')
                 break;
         }
-    }, [activeScroll])
+}, [activeScroll])
 
     useEffect(()=> {
         scrollPos >= 300 ? setChangePosition(true) : setChangePosition(false)  
