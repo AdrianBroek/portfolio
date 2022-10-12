@@ -6,7 +6,7 @@ import StateContext from "../components/StateContext";
 const Skillset = () => {
     const {activeScroll, setActiveScroll} = useContext(StateContext)
     const { ref, inView, entry } = useInView({
-        threshold: 0,
+        threshold: 0.1,
     });
     const [grow, setGrow] = useState('20%')
     const [open1, setOpen1] = useState(false)

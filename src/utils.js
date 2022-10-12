@@ -1,6 +1,5 @@
 import krawczykrental from '../src/images/projectsBackgrounds2/krawczykrental.png'
 import namileo from '../src/images/projectsBackgrounds2/namileo.png'
-import gk from '../src/images/projectsBackgrounds2/grupakrawczyk.png'
 import iPomocni from '../src/images/projectsBackgrounds2/ipomocni.png'
 import blucar from '../src/images/projectsBackgrounds2/blucar.png'
 
