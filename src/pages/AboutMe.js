@@ -29,7 +29,7 @@ const About = () => {
             for(let i=0; i < splitedWord.length; i++){
                 setTimeout(function timer() {
                     setWords(current => [...current, splitedWord[i]])
-                }, i * 80);
+                }, i * 40);
             }
         }
     }
