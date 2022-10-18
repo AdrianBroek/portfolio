@@ -1,5 +1,4 @@
 import weatherApp from './images/projectsBackgrounds/weatherApp.png'
-import pajokWebsite from './images/projectsBackgrounds/pajokWebsite.png'
 import beatmaker from './images/projectsBackgrounds/beatmaker.png'
 import ToDoList from './images/projectsBackgrounds/todo.png'
 import MusicPlayer from './images/projectsBackgrounds/musicPlayer.png'
@@ -13,13 +12,6 @@ const dataProjects = [
         description: 'Weather app on react.js. Used API via Axios. Not 100% finished.',
         link: 'https://adrianbroek.github.io/weatherApp/',
         image: weatherApp,
-        backgroundColor: '#000'
-    },
-    {
-        name: 'Pajok - website',
-        description: 'Website made for freelance photographer. Used GraphQl - HyGraph for easy website editing. Website deployed on netlify. Website is not 100% done.',
-        link: 'https://imaginative-meerkat-7cb380.netlify.app',
-        image: pajokWebsite,
         backgroundColor: '#000'
     },
     {
