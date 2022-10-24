@@ -30,12 +30,12 @@ function App() {
       <Contact />
       <div class="boxes">
         <ul>
-          <li><img src={atom}></img></li>
+          <li></li>
           <li><img src={css}></img></li>
           <li><img src={htmlCoding}></img></li>
+          <li></li>
+          <li></li>
           <li><img src={atom}></img></li>
-          <li><img src={htmlCoding}></img></li>
-          <li><img src={javaScript}></img></li>
         </ul>
       </div>
     </StateProvider>
