@@ -101,19 +101,20 @@ const Contact = () => {
                 </div>
             </aside>
             <form ref={form} onSubmit={sendEmail}>
-                <div className="inputContainer name">
-                    <input minLength='3' required type="text" name="fname" id="fname" />
-                    <label className="inputLabel">
-                        <span className="inputSpan">First Name</span>
-                    </label>
+                <div className="fifty">
+                    <div className="inputContainer name">
+                        <input minLength='3' required type="text" name="fname" id="fname" />
+                        <label className="inputLabel">
+                            <span className="inputSpan">First Name</span>
+                        </label>
+                    </div>
+                    <div className="inputContainer name">
+                        <input minLength='3' required type="text" name="lname" id="lname" />
+                        <label className="inputLabel">
+                            <span className="inputSpan">Last Name</span>
+                        </label>
+                    </div>
                 </div>
-                <div className="inputContainer name">
-                    <input minLength='3' required type="text" name="lname" id="lname" />
-                    <label className="inputLabel">
-                        <span className="inputSpan">Last Name</span>
-                    </label>
-                </div>
-                
                 <div className="inputContainer mail">
                     <input onChange={mailChange} required type="email" name="user_email" id="user_email"/>
                     <label className="inputLabel">
