@@ -1,8 +1,11 @@
 import React from "react";
+import tags from '../images/icons/tags.png'
 
 const Project = ({item, index}) => {
-
+    // console.log(item)
     return (
+        <>
+        {item && (
         <article className="project">
             <div className="overlay"></div>
             <a target="blank" href={item.link} className="style projectDesc">
@@ -15,8 +18,20 @@ const Project = ({item, index}) => {
                     <h2>{item.name}</h2>
                     <p>{item.description}</p>
                 </div>
+                <div className="tags"
+                style={{display: "flex", flexWrap: "wrap"}}
+                >
+                {item.tags ? item.tags.map((tag)=> (
+                    <p>
+                        <img style={{filter: "invert(20%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="18px" src={tags} />
+                        {tag}
+                    </p>
+                )) : ""}
+                </div>
             </a>
         </article>
+        )}
+        </>
     )
 }
 

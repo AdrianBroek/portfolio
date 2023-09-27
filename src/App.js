@@ -10,6 +10,7 @@ import AboutMe from './pages/AboutMe'
 import Skillset from './pages/Skillset'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
+import Skills from './pages/Skills'
 
 // icons
 import atom from './images/icons/atom.png'
@@ -17,12 +18,16 @@ import htmlCoding from './images/icons/html-coding.png'
 import javaScript from './images/icons/java-script.png'
 import css from './images/icons/css-3.png'
 
+// Particles 
+import ParticleCanvas from './components/ParticleCanvas';
+
 function App() {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
   return (
     <StateProvider>
+      <ParticleCanvas />
       <MainMenu />
       <AboutMe />
       <Skillset />
@@ -38,6 +43,7 @@ function App() {
           <li><img src={atom}></img></li>
         </ul>
       </div>
+      
     </StateProvider>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
-import data from '../data'
-import utils from '../utils'
+import data from '../storage/data'
+import utils from '../storage/utils'
 import Project from '../components/Project'
 import { useInView } from 'react-intersection-observer';
 import StateContext from "../components/StateContext";

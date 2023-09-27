@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import arrow from '../images/icons/arrow.png'
 import { useInView } from 'react-intersection-observer';
 import StateContext from "../components/StateContext";
+import Skills from "./Skills";
 
 const Skillset = () => {
     const {activeScroll, setActiveScroll} = useContext(StateContext)
@@ -29,7 +30,9 @@ const Skillset = () => {
     
     return (
         <section id="skillset" ref={ref} className="skillset container">
-            <div className="st">
+            
+            <Skills />
+            {/* <div className="st">
                 <div className="tables">
                     <h1 className="name">Skillset</h1>
                     <div className="skill html">
@@ -159,7 +162,8 @@ const Skillset = () => {
 
                     </div>
                 </div>
-            </div>
+            </div> */}
+            
         </section>
     )
 }

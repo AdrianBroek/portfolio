@@ -1,0 +1,15 @@
+#skills {
+    .info {
+        padding: 0 0 1rem;
+        z-index: 1;
+        position: relative;
+        display: block;
+    }
+    .icon-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}

@@ -31,7 +31,7 @@ html{
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-h1.name {font-size: 5rem;}
+h1.name {font-size: 5rem;z-index: 1; display: block;position: relative;}
 
 * :not(path){
   margin: 0;
@@ -42,6 +42,7 @@ h1.name {font-size: 5rem;}
 
 p {
   font-weight: 300;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 501px) {
@@ -50,7 +51,7 @@ p {
         margin: 0;
     }
   }
-  h1.name {font-size: 3.5rem}
+  h1.name {font-size: 3.5rem;}
 }
 
 .boxes {
@@ -141,18 +142,20 @@ p {
 
 
 
-@keyframes animate{
-  from{
-    transform: translateY(150vh) rotate(180deg)
-  }
-  to{
-    transform: translateY(-150%)
-      rotate(360deg)
-  }
-}
+// @keyframes animate{
+//   from{
+//     transform: translateY(150vh) rotate(180deg)
+//   }
+//   to{
+//     transform: translateY(-150%)
+//       rotate(360deg)
+//   }
+// }
 
 @import 'mainMenu';
 @import 'aboutMe';
 @import 'skillset';
 @import 'projects';
-@import 'contact'
+@import 'contact';
+@import 'skill';
+@import 'skillIcon';

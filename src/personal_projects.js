@@ -1,25 +1,41 @@
 import weatherApp from './images/projectsBackgrounds/weatherApp.png'
-import beatmaker from './images/projectsBackgrounds/beatmaker.png'
-import ToDoList from './images/projectsBackgrounds/todo.png'
-import MusicPlayer from './images/projectsBackgrounds/musicPlayer.png'
-import colorsProject from './images/projectsBackgrounds/colorsProject.png'
 import calculator from './images/projectsBackgrounds/calculator.png'
-import flappyBird from './images/projectsBackgrounds/flappyBird.png'
+import eCommerceApp from './images/projectsBackgrounds/eCommerceApp.png'
+import PriceListApp from './images/projectsBackgrounds/PriceListApp.png'
+
 
 const dataProjects = [
+    {
+        name: 'PriceListApp',
+        description: 'Web application for easy matching of products to price lists.',
+        link: 'https://adrianbroek.github.io/priceList/',
+        image: PriceListApp,
+        backgroundColor: '#000',
+        tags: "React, redux toolkit, typescript, firebase, styledComponents"
+    },
+    {
+        name: 'eCommerceApp',
+        description: 'Online store, with user account, basket, blog, categories, orders',
+        link: 'https://adrianbroek.github.io/eCommerceApp/',
+        image: eCommerceApp,
+        backgroundColor: '#000',
+        tags: "react, redux(old), redux-thunk, applyMiddleware, js, localStorage, scss, axios, picsum.photos api, framer-motion, slick-slider"
+    },
     {
         name: 'WeatherApp',
         description: 'Weather app on react.js. Used API via Axios. Not 100% finished.',
         link: 'https://adrianbroek.github.io/weatherApp/',
         image: weatherApp,
-        backgroundColor: '#000'
+        backgroundColor: '#000',
+        tags: "react, js, context-api, axios, scss"
     },
     {
         name: 'Beatmaker',
         description: 'HTML, CSS, JS(w/ classess) beatmaker app',
         link: 'https://adrianbroek.github.io/beatmaker/beatmaker%20done/',
         image: beatmaker,
-        backgroundColor: '#000'
+        backgroundColor: '#000',
+        
     },
     {
         name: 'ToDo List ',
