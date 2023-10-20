@@ -15,13 +15,15 @@
         max-width: 515px;
         position: relative;
         background: transparent;
+        -webkit-backdrop-filter: blur(.1px);
+        backdrop-filter: blur(.1px);
+        background: rgba(255, 255, 255, 0.0175);
         border-radius: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         border: 1px solid rgba(223, 223, 223, 0.548);
         &.changed {
-            /* From https://css.glass */
             background: rgba(255, 255, 255, 0.04);
             box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(5.6px);
@@ -64,14 +66,14 @@
             cursor: pointer;
             .link {
                 display: block;
-                transition: .16s ease-in;
+                transition: .1s ease-in;
                 padding: 5rem;
                 white-space: nowrap;
                 font-size: 1.5rem;
                 text-decoration: none;
             }
             &:hover .link{
-                transform: scale(1.15);
+                transform: scale(1.15,1.05);
             }
             &.st {
                 top: -12%;
@@ -193,4 +195,11 @@
         }
     }
 
+}
+
+
+@keyframes textShadow {
+    0% {
+
+    }
 }

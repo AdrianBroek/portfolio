@@ -40,9 +40,14 @@
     background: rgba(255, 255, 255, 0.192);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.597);
+    
     p {
         background-color: rgb(21, 32, 41);
         padding: .25rem;
+        border-top: 3px solid rgb(195, 185, 185);
+        border-bottom: 3px solid rgb(195, 185, 185);
+        border-left: 3px solid rgb(117, 110, 110);
+        border-right: 3px solid rgb(117, 110, 110);
     }
     h3 {
         text-transform: uppercase;

@@ -41,17 +41,17 @@ const skillsData = [
     {
         name: 'typescript',
         icon: typescript,
-        info: "{ types, interfaces for }"
+        info: "{ types(primitives, any, ), interfaces }"
     },
     {
         name: 'react',
         icon: react,
-        info: "{ jsx and tsx, hooks, state, useEffect, useMemo, useContext, props and more }"
+        info: "{ jsx/tsx, hooks, state, useEffect, useMemo, useContext, props and more }"
     },
     {
         name: 'redux',
         icon: redux,
-        info: "{ dispatch, selector, thunk, applymiddleware, payload action, reducers, redux toolkit, old fashion switch reducers }"
+        info: "{ dispatch, selector, thunk, applymiddleware, payload action, reducers, redux toolkit, switch reducers }"
     },
     {
         name: 'github',
