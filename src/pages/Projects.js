@@ -6,6 +6,11 @@ import { useInView } from 'react-intersection-observer';
 import StateContext from "../components/StateContext";
 import { dataTags } from "../storage/tags";
 import tags from '../images/icons/tags.png'
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import ClearIcon from '@mui/icons-material/Clear';
+import { IconButton } from "@mui/material";
+import AddIcon from '@mui/icons-material/Add';
 
 const Projects = () => {
     const {activeScroll, setActiveScroll} = useContext(StateContext)
@@ -31,36 +36,35 @@ const Projects = () => {
     }
 
     function filterProjectsByTagName() {
+        const objectsToRemove  = []
 
-            const objectsToRemove  = []
-
-            // copy array of data
-            const newArray = [...data]
-            console.log({newArray: newArray})
-            // mapuj kazdy projekt z osobna
-            newArray.map((proj)=> {
-                    // jesli ktorykolwiek z tagow jest w activetags, dodaj projekt
-                    // jesli nie to nie dodawaj/usun
-                    const tagExist = activeTagList.some(tag => proj.tags.includes(tag))
-                    console.log(tagExist)
-                    if(tagExist) {
-                        // sprawdz czy jest w filterowanym storage juz ten obiekt
-                        if (!filteredStorage.includes(proj)){
-                            setFilteredStorage(state=>[...state, proj])
-                        }
-                    } else {
-                        
-                        if (filteredStorage.includes(proj)){
-                            objectsToRemove.push(proj)
-                        }
+        // copy array of data
+        const newArray = [...data]
+        console.log({newArray: newArray})
+        // mapuj kazdy projekt z osobna
+        newArray.map((proj)=> {
+                // jesli ktorykolwiek z tagow jest w activetags, dodaj projekt
+                // jesli nie to nie dodawaj/usun
+                const tagExist = activeTagList.some(tag => proj.tags.includes(tag))
+                console.log(tagExist)
+                if(tagExist) {
+                    // sprawdz czy jest w filterowanym storage juz ten obiekt
+                    if (!filteredStorage.includes(proj)){
+                        setFilteredStorage(state=>[...state, proj])
                     }
-            })
+                } else {
+                    
+                    if (filteredStorage.includes(proj)){
+                        objectsToRemove.push(proj)
+                    }
+                }
+        })
 
-            // if objects to remove more than 0, remove them from filteredStorage
-            if(objectsToRemove.length > 0){
-                let FScopy = [...filteredStorage]
-                objectsToRemove.forEach((element)=> {
-                    FScopy = FScopy.filter((item) => item.name != element.name);
+        // if objects to remove more than 0, remove them from filteredStorage
+        if(objectsToRemove.length > 0){
+            let FScopy = [...filteredStorage]
+            objectsToRemove.forEach((element)=> {
+                FScopy = FScopy.filter((item) => item.name != element.name);
             })
             setFilteredStorage(FScopy)
         }
@@ -99,11 +103,22 @@ const Projects = () => {
     // add tag to activetaglist on btn click if it doesnt exist already
     const submitTag = (e) => {
         e.preventDefault()
-        if(inputText != '' && !activeTagList.includes(inputText)){
+        if(inputText != '' && !activeTagList.includes(inputText) && dataTags.includes(inputText)){
             setActiveTagList(state => [...state, inputText])
         }
     };
 
+    // asdasd
+    const pickTag = (e) => {
+        if(inputText != '' && !activeTagList.includes(e.target.id)){
+            setActiveTagList(state => [...state, e.target.id])
+            console.log(e.target.id)
+        }
+    }
+
+    const clearInput = (e) => {
+        setInputText('')
+    }
     
     useEffect(()=>{
         if(inView){
@@ -117,18 +132,46 @@ const Projects = () => {
     return (
         <section id="projects" ref={ref} className="projects container">
             <h1 className="name">Projects</h1>
-            <input type="text" value={inputText} onChange={inputHandler}/>
-            <button type="submit" onClick={submitTag}>DODAJ TAGA</button>
             {activeTagList.length > 0 && (
                 <div className="active-tags">
                     {activeTagList.map((tag) => (
-                        <p id={tag} onClick={delTag}>
-                            <img  style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
+                        <p id={tag} onClick={delTag} className={activeTagList.includes(tag) ? "active" : ""}>
+                            <img style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
                             {tag}
                         </p>
                     ))}
                 </div>
             )}
+            <div className="search-tags-container">
+                {/* <input type="text" value={inputText} onChange={inputHandler}/> */}
+                <TextField inputProps={{ style: { color: "#fff" } }} focused value={inputText} onChange={inputHandler} label="Add tag" variant="outlined" 
+                  InputProps={{
+                    endAdornment: inputText.length > 0 ? (
+                      <InputAdornment position="end">
+                        <IconButton onClick={clearInput} edge="end">
+                          <ClearIcon />
+                        </IconButton>
+                      </InputAdornment>
+                    ) : null
+                  }}
+                />
+                <IconButton className="addTag" type="submit" onClick={submitTag} aria-label="addTag">
+                    <AddIcon />
+                </IconButton>
+                <div className="search">
+                    {dataTags.length > 0 && inputText.length > 0 && (
+                    <div className="tags">
+                        {dataTags.map((tag) => (
+                            <p id={tag} onClick={pickTag} className={activeTagList.includes(tag) ? 'active' : ""}>
+                                <img  style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
+                                {tag}
+                            </p>
+                        ))}
+                    </div>
+                    )}
+                </div>
+            </div>
+
             <div className="projectContainer">
                 {storage.map((item, index)=> (
                     <Project item={item} key={index} />

@@ -66,7 +66,7 @@ const dataProjects = [
     {
         name: 'Pajok - website',
         description: 'Website made for freelance photographer. Used GraphQl - HyGraph for easy website editing. Website deployed on netlify. Website is not 100% done.',
-        link: 'https://imaginative-meerkat-7cb380.netlify.app',
+        link: 'https://pajok.netlify.app/',
         image: pajokWebsite,
         backgroundColor: '#000',
         tags: [
