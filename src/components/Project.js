@@ -2,7 +2,7 @@ import React from "react";
 import tags from '../images/icons/tags.png'
 
 const Project = ({item, index}) => {
-    // console.log(item)
+
     return (
         <>
         {item && (
@@ -22,8 +22,8 @@ const Project = ({item, index}) => {
                 style={{display: "flex", flexWrap: "wrap"}}
                 >
                 {item.tags ? item.tags.map((tag)=> (
-                    <p>
-                        <img style={{filter: "invert(20%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="18px" src={tags} />
+                    <p className={tag == "my-project" ? "my-project" : ""}>
+                        <img style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="18px" src={tags} />
                         {tag}
                     </p>
                 )) : ""}

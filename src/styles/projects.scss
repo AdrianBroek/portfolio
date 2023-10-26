@@ -1,4 +1,14 @@
 .projects {
+    .active-tags {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        color: black;
+    }
+    input, button {
+        position: relative;
+        color: black;
+    }
     .projectContainer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -52,6 +62,12 @@
                     font-family: "Roboto", sans-serif;
                     p {
                         font-size: .85rem;
+
+                    }
+                    .my-project {
+                        img {
+                            filter: invert(77%) sepia(74%) saturate(962%) hue-rotate(358deg) brightness(103%) contrast(101%) !important;
+                        }
                     }
                     img {
                         width: 12px;

@@ -8,7 +8,11 @@ import flappyBird from '../images/projectsBackgrounds/flappyBird.png'
 import eCommerceApp from '../images/projectsBackgrounds/eCommerceApp.png'
 import PriceListApp from '../images/projectsBackgrounds/PriceListApp.png'
 import pajokWebsite from '../images/projectsBackgrounds2/pajokWebsite.png'
-
+import krawczykrental from '../images/projectsBackgrounds2/krawczykrental.png'
+import namileo from '../images/projectsBackgrounds2/namileo.png'
+import iPomocni from '../images/projectsBackgrounds2/ipomocni.png'
+import blucar from '../images/projectsBackgrounds2/blucar.png'
+import karcher from '../images/projectsBackgrounds2/karcher.png'
 
 const dataProjects = [
     {
@@ -18,11 +22,12 @@ const dataProjects = [
         image: PriceListApp,
         backgroundColor: '#000',
         tags: [
-            "React", 
-            "redux toolkit", 
+            "react", 
+            "redux", 
             "typescript", 
             "firebase", 
-            "styledComponents"
+            "styled-components",
+            "my-project"
         ]
     },
     {
@@ -32,22 +37,20 @@ const dataProjects = [
         image: eCommerceApp,
         backgroundColor: '#000',
         tags: [
-        'react', 
-        'redux(old)', 
-        'redux-thunk', 
-        'applyMiddleware', 
-        'js', 
-        'localStorage', 
-        'scss', 
-        'axios', 
-        'picsum.photos api', 
-        'framer-motion', 
-        'slick-slider'
+            'react', 
+            'redux', 
+            'js', 
+            'scss', 
+            'axios', 
+            'picsum.photos api', 
+            'framer-motion', 
+            'slick-slider',
+            "my-project"
         ]
     },
     {
         name: 'WeatherApp',
-        description: 'Weather app on react.js. Used API via Axios. Not 100% finished.',
+        description: 'Weather app on react. Used API via Axios. Not 100% finished.',
         link: 'https://adrianbroek.github.io/weatherApp/',
         image: weatherApp,
         backgroundColor: '#000',
@@ -56,7 +59,8 @@ const dataProjects = [
             'js', 
             'context-api', 
             'axios', 
-            'scss'
+            'scss',
+            "my-project"
         ]
     },
     {
@@ -66,10 +70,11 @@ const dataProjects = [
         image: pajokWebsite,
         backgroundColor: '#000',
         tags: [
-            "react.js", 
+            "react", 
             'graphql', 
             'styled-components', 
-            "framer-motion"
+            "framer-motion",
+            "my-project"
         ]
     },
     {
@@ -79,9 +84,10 @@ const dataProjects = [
         image: beatmaker,
         backgroundColor: '#000',
         tags: [
-            "HTML", 
-            'CSS', 
-            'JS(w/ classess)', 
+            "html", 
+            'css', 
+            'js', 
+            "course-project"
         ]
     },
     {
@@ -91,9 +97,10 @@ const dataProjects = [
         image: ToDoList,
         backgroundColor: '#000',
         tags: [
-            "HTML", 
-            'CSS', 
-            'JS(local storage))', 
+            "html", 
+            'css', 
+            'js', 
+            "course-project"
         ]
     },
     {
@@ -103,9 +110,10 @@ const dataProjects = [
         image: MusicPlayer,
         backgroundColor: '#000',
         tags: [
-            "HTML", 
-            'CSS', 
-            'JS (local storage)', 
+            "html", 
+            'css', 
+            'js', 
+            "course-project"
         ]
     },
     {
@@ -115,21 +123,23 @@ const dataProjects = [
         image: colorsProject,
         backgroundColor: '#000',
         tags: [
-            "HTML", 
-            'CSS', 
-            'JS (local storage)', 
+            "html", 
+            'css', 
+            'js', 
+            "course-project"
         ]
     },
     {
         name: 'Calculator',
-        description: 'Simple calculator made in Html, Css, Js',
+        description: 'Simple calculator made in html, css, Js',
         link: 'https://adrianbroek.github.io/Calculator/',
         image: calculator,
         backgroundColor: '#000',
         tags: [
-            "HTML", 
-            'CSS', 
-            'JS', 
+            "html", 
+            'css', 
+            'js', 
+            "my-project"
         ]
     },
     {
@@ -139,11 +149,79 @@ const dataProjects = [
         image: flappyBird,
         backgroundColor: '#000',
         tags: [
-            "HTML", 
-            'CSS', 
-            'JS (canvas)', 
+            "html", 
+            'css', 
+            'js', 
+            "course-project"
         ]
-    }
+    },
+    {
+        name: 'KrawczykRental',
+        description: 'Webstore made in prestashop.',
+        link: 'https://krawczykrental.pl/',
+        image: krawczykrental,
+        backgroundColor: '#000',
+        tags: [
+            "tpl", 
+            'jquery', 
+            'smarty', 
+            'docker', 
+            'scss', 
+        ]
+    },
+    {
+        name: 'KarcherCenterKrawczyk',
+        description: 'Webstore made in prestashop',
+        link: 'https://karchercenter-krawczyk.pl/',
+        image: karcher,
+        backgroundColor: '#000',
+        tags: [
+            "tpl", 
+            'jquery', 
+            'smarty', 
+            'docker', 
+            'scss', 
+        ]
+    },
+    {
+        name: 'Namileo',
+        description: 'Webstore made in prestashop.',
+        link: 'https://namileo.com/',
+        image: namileo,
+        backgroundColor: '#000',
+        tags: [
+            "tpl", 
+            'jquery', 
+            'smarty', 
+            'docker', 
+            'scss', 
+        ]
+    },
+    {
+        name: 'iPomocni',
+        description: 'Webstore made in Wordpress mostly via creative elements.',
+        link: 'https://ipomocni.pl/',
+        image: iPomocni,
+        backgroundColor: '#000',
+        tags: [
+            "wordpress", 
+            'jquery', 
+            'css', 
+        ]
+    },
+    {
+        name: 'Blucar',
+        description: 'Webstore made in Wordpress.',
+        link: 'https://blucar.pl/',
+        image: blucar,
+        backgroundColor: '#000',
+        tags: [
+            "wordpress", 
+            "ACF", 
+            'jquery', 
+            'css', 
+        ]
+    },
 ]
 
 export default dataProjects
