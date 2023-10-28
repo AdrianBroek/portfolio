@@ -6,13 +6,27 @@
         color: #fff;
         cursor: pointer;
         margin-bottom: 1rem;
+        min-height: 30px;
     }
     .search-tags-container {
         position: relative;
         display: flex;
+        margin-bottom: 2rem;
         input, button {
             position: relative;
             color: black;
+        }
+        .suggestedTag {
+            position: absolute;
+            top: 49%;
+            transform: translateY(-46%);
+            left: 14px;
+            font-family: "Roboto","Helvetica","Arial",sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.4375em;
+            letter-spacing: 0.00938em;
+            opacity: 0.15;
         }
         .addTag {
             padding: .25rem;
@@ -31,8 +45,6 @@
             border-bottom-right-radius: .25rem;
             background-color: rgb(21, 32, 41);
             box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-            // border: 1px solid rgba(255, 255, 255, 0.597);
-            
             .tags{
                 display: flex;
                 flex-wrap: wrap;
@@ -159,6 +171,7 @@
         .projectContainer {
             grid-template-columns: 100%;
             .project {
+                transform: unset;
                 height: auto;
                 .projectDesc {
                     height: auto;

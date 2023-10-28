@@ -19,6 +19,7 @@ const Projects = () => {
     const [filteredStorage, setFilteredStorage] = useState([])
 
     const [inputText, setInputText] = useState('')
+    const [suggestedTag, setSuggestedTag] = useState('')
 
     const [tagList, setTagList] = useState(dataTags)
 
@@ -31,9 +32,24 @@ const Projects = () => {
     });  
 
     function inputHandler(e) {
-        // console.log(inputText)
-        setInputText(e.target.value)
+        const inputValue = e.target.value;
+        setInputText(inputValue);
+    
+        if (inputValue) {
+            const matchingTags = dataTags.filter(tag => tag.includes(inputValue));
+    
+            if (matchingTags.length > 0) {
+                const suggestedTag = matchingTags[0];
+                setSuggestedTag(suggestedTag);
+                // Tutaj możesz zrobić coś z sugerowanym tagiem, np. przypisać go do stanu, itp.
+            } else {
+                setSuggestedTag('')
+            }
+        }else {
+            setSuggestedTag('')
+        }
     }
+    
 
     function filterProjectsByTagName() {
         const objectsToRemove  = []
@@ -45,7 +61,7 @@ const Projects = () => {
         newArray.map((proj)=> {
                 // jesli ktorykolwiek z tagow jest w activetags, dodaj projekt
                 // jesli nie to nie dodawaj/usun
-                const tagExist = activeTagList.some(tag => proj.tags.includes(tag))
+                const tagExist = activeTagList.every(tag => proj.tags.includes(tag))
                 console.log(tagExist)
                 if(tagExist) {
                     // sprawdz czy jest w filterowanym storage juz ten obiekt
@@ -108,16 +124,20 @@ const Projects = () => {
         }
     };
 
-    // asdasd
+    // add tag from board to activetaglist on btn click if it doesnt exist already
     const pickTag = (e) => {
         if(inputText != '' && !activeTagList.includes(e.target.id)){
             setActiveTagList(state => [...state, e.target.id])
             console.log(e.target.id)
+        }else if (inputText != '' && activeTagList.includes(e.target.id)){
+            delTag(e)
         }
     }
 
+    // clear searchtag input
     const clearInput = (e) => {
         setInputText('')
+        setSuggestedTag('')
     }
     
     useEffect(()=>{
@@ -132,28 +152,52 @@ const Projects = () => {
     return (
         <section id="projects" ref={ref} className="projects container">
             <h1 className="name">Projects</h1>
+            <div className="active-tags">
             {activeTagList.length > 0 && (
-                <div className="active-tags">
-                    {activeTagList.map((tag) => (
-                        <p id={tag} onClick={delTag} className={activeTagList.includes(tag) ? "active" : ""}>
-                            <img style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
-                            {tag}
-                        </p>
-                    ))}
-                </div>
+                <>
+                {activeTagList.map((tag) => (
+                    <p id={tag} onClick={delTag} className={activeTagList.includes(tag) ? "active" : ""}>
+                        <img style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
+                        {tag}
+                    </p>
+                ))}
+                </>
             )}
+            </div>
             <div className="search-tags-container">
-                {/* <input type="text" value={inputText} onChange={inputHandler}/> */}
-                <TextField inputProps={{ style: { color: "#fff" } }} focused value={inputText} onChange={inputHandler} label="Add tag" variant="outlined" 
-                  InputProps={{
-                    endAdornment: inputText.length > 0 ? (
-                      <InputAdornment position="end">
-                        <IconButton onClick={clearInput} edge="end">
-                          <ClearIcon />
-                        </IconButton>
-                      </InputAdornment>
-                    ) : null
-                  }}
+                <div className="suggestedTag">{suggestedTag}</div>
+                <TextField 
+                    inputProps={{ style: { color: "#fff", border: "#fff" } }} 
+                    value={inputText} onChange={inputHandler} label="Filter by tag" variant="outlined" 
+                    sx={{
+                        width: 300,
+                        '& .Mui-focused': {
+                            color: '#fff',
+                            border: "#fff"
+                        },
+                        '& .MuiInputBase-input': {
+                            color: '#fff',
+                        },
+                        '& fieldset.MuiOutlinedInput-notchedOutline': {
+                            color: '#fff',
+                            borderColor: "#fff"
+                        },
+                        '& .MuiInputLabel-formControl': {
+                            color: '#fff',
+                        },
+                        '& input:hover': {
+                            borderColor: "#fff"
+                        }
+                    }}
+                    InputProps={{
+                        endAdornment: inputText.length > 0 ? (
+                        <InputAdornment position="end">
+                            <IconButton onClick={clearInput} edge="end">
+                            <ClearIcon />
+                            </IconButton>
+                        </InputAdornment>
+                        ) : null
+                    }}
                 />
                 <IconButton className="addTag" type="submit" onClick={submitTag} aria-label="addTag">
                     <AddIcon />

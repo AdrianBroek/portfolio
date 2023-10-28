@@ -38,6 +38,7 @@ const ParticleCanvas = () => {
                         onHover: {
                             enable: false,
                             mode: "repulse",
+                            size: 20
                         },
                         resize: true,
                     },
@@ -66,7 +67,7 @@ const ParticleCanvas = () => {
                         direction: "none",
                         enable: true,
                         outModes: {
-                            default: "bounce",
+                            default: "destroy",
                         },
                         random: false,
                         speed: 1,
