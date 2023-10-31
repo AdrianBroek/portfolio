@@ -17,7 +17,7 @@ import karcher from '../images/projectsBackgrounds2/karcher.png'
 const dataProjects = [
     {
         name: 'PriceListApp',
-        description: 'Web application for easy matching of products to price lists.',
+        description: 'Web application for easy matching of products to price lists. I did it for my job, we needed to setup pricelists to multiple products in short period of time. Project helped in this case with success.',
         link: 'https://adrianbroek.github.io/priceList/',
         image: PriceListApp,
         backgroundColor: '#000',
@@ -32,7 +32,7 @@ const dataProjects = [
     },
     {
         name: 'eCommerceApp',
-        description: 'Online store, with user account, basket, blog, categories, orders',
+        description: 'Online store, with user account, basket, blog, categories, orders. I made it to learn redux with react. It is 100% my project, did not copy it from the internet. ',
         link: 'https://adrianbroek.github.io/eCommerceApp/',
         image: eCommerceApp,
         backgroundColor: '#000',
@@ -50,7 +50,7 @@ const dataProjects = [
     },
     {
         name: 'WeatherApp',
-        description: 'Weather app on react. Used API via Axios. Not 100% finished.',
+        description: 'Weather app on react. Used API via Axios. I created it, to learn react with use-context api and axios. 100% my project.',
         link: 'https://adrianbroek.github.io/weatherApp/',
         image: weatherApp,
         backgroundColor: '#000',
@@ -65,12 +65,13 @@ const dataProjects = [
     },
     {
         name: 'Pajok - website',
-        description: 'Website made for freelance photographer. Used GraphQl - HyGraph for easy website editing. Website deployed on netlify. Website is not 100% done.',
+        description: 'Website made for freelance photographer. Used GraphQl - HyGraph for easy website editing. Website deployed on netlify. I created it.',
         link: 'https://pajok.netlify.app/',
         image: pajokWebsite,
         backgroundColor: '#000',
         tags: [
             "react", 
+            'js', 
             'graphql', 
             'styled-components', 
             "framer-motion",
@@ -157,7 +158,7 @@ const dataProjects = [
     },
     {
         name: 'KrawczykRental',
-        description: 'Webstore made in prestashop.',
+        description: 'Webstore made in prestashop. That was my personal project in my junior frontend job',
         link: 'https://krawczykrental.pl/',
         image: krawczykrental,
         backgroundColor: '#000',
@@ -167,11 +168,13 @@ const dataProjects = [
             'smarty', 
             'docker', 
             'scss', 
+            'my-project',
+            'prestashop'
         ]
     },
     {
         name: 'KarcherCenterKrawczyk',
-        description: 'Webstore made in prestashop',
+        description: 'Webstore made in prestashop. I was working on this website during my junior frontend job.',
         link: 'https://karchercenter-krawczyk.pl/',
         image: karcher,
         backgroundColor: '#000',
@@ -180,12 +183,13 @@ const dataProjects = [
             'jquery', 
             'smarty', 
             'docker', 
-            'scss', 
+            'scss',
+            'prestashop'
         ]
     },
     {
         name: 'Namileo',
-        description: 'Webstore made in prestashop.',
+        description: 'Webstore made in prestashop. ',
         link: 'https://namileo.com/',
         image: namileo,
         backgroundColor: '#000',
@@ -195,11 +199,12 @@ const dataProjects = [
             'smarty', 
             'docker', 
             'scss', 
+            'prestashop'
         ]
     },
     {
         name: 'iPomocni',
-        description: 'Webstore made in Wordpress mostly via creative elements.',
+        description: 'Webstore made in Wordpress mostly via creative elements. I recreated this website in wp, during my junior frontend job.',
         link: 'https://ipomocni.pl/',
         image: iPomocni,
         backgroundColor: '#000',
@@ -211,13 +216,13 @@ const dataProjects = [
     },
     {
         name: 'Blucar',
-        description: 'Webstore made in Wordpress.',
-        link: 'https://blucar.pl/',
+        description: 'Webstore made in Wordpress. I was working on this site in my junior frontend job. Made landingpage in acf, used js, html, css and php tag.',
+        link: 'https://blucar.pl/slub/',
         image: blucar,
         backgroundColor: '#000',
         tags: [
             "wordpress", 
-            "ACF", 
+            "acf", 
             'jquery', 
             'css', 
         ]

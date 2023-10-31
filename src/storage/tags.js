@@ -13,7 +13,6 @@ export const dataTags = [
     "graphql",
     "styled-components",
     "html",
-    "JS",
     "css",
     "wordpress",
     "smarty",
@@ -21,5 +20,6 @@ export const dataTags = [
     "tpl",
     "jquery",
     "my-project",
-    "course-project"
+    "course-project",
+    'prestashop'
 ]

@@ -56,20 +56,18 @@ const Projects = () => {
 
         // copy array of data
         const newArray = [...data]
-        console.log({newArray: newArray})
         // mapuj kazdy projekt z osobna
         newArray.map((proj)=> {
                 // jesli ktorykolwiek z tagow jest w activetags, dodaj projekt
                 // jesli nie to nie dodawaj/usun
                 const tagExist = activeTagList.every(tag => proj.tags.includes(tag))
-                console.log(tagExist)
+                // console.log(tagExist)
                 if(tagExist) {
                     // sprawdz czy jest w filterowanym storage juz ten obiekt
                     if (!filteredStorage.includes(proj)){
                         setFilteredStorage(state=>[...state, proj])
                     }
                 } else {
-                    
                     if (filteredStorage.includes(proj)){
                         objectsToRemove.push(proj)
                     }
@@ -84,26 +82,19 @@ const Projects = () => {
             })
             setFilteredStorage(FScopy)
         }
+        
     }
-
-    // set filtered storage to data on load component
-    useEffect(()=> {
-        setFilteredStorage(data)
-    },[])
 
     // setStorage if filteredStorage changes
     useEffect(()=> {
         setStorage(filteredStorage)
-
-        if(filteredStorage.length == 0){
-            setFilteredStorage(data)
-        }
+        // console.log(filteredStorage)
     },[filteredStorage])
 
     // fire filterProjectsByTagName function on activetaglist change
     useEffect(()=> {
         filterProjectsByTagName()
-        console.log(activeTagList)
+        // console.log(activeTagList)
     },[activeTagList])
 
     // del tag on click
@@ -128,7 +119,7 @@ const Projects = () => {
     const pickTag = (e) => {
         if(inputText != '' && !activeTagList.includes(e.target.id)){
             setActiveTagList(state => [...state, e.target.id])
-            console.log(e.target.id)
+            // console.log(e.target.id)
         }else if (inputText != '' && activeTagList.includes(e.target.id)){
             delTag(e)
         }
