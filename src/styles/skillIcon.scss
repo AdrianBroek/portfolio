@@ -14,7 +14,7 @@
     transition: 0.2s ease-out;
     z-index: 1;
     cursor: help;
-    
+
     &:hover {
         border: 1px solid rgb(255, 255, 255);
     }
@@ -52,4 +52,13 @@
     h3 {
         text-transform: uppercase;
     }
+}
+
+
+@media screen and (max-width: 500px){
+    .skill-icon {
+        width: 90px;
+        height: 90px;
+    }
+
 }

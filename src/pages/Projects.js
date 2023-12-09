@@ -25,6 +25,8 @@ const Projects = () => {
 
     const [activeTagList, setActiveTagList] = useState([])
 
+    const [activeSearch, setActiveSearch] = useState(false)
+
     const [util, setUtil] = useState(utils)
 
     const { ref, inView,  } = useInView({
@@ -117,10 +119,10 @@ const Projects = () => {
 
     // add tag from board to activetaglist on btn click if it doesnt exist already
     const pickTag = (e) => {
-        if(inputText != '' && !activeTagList.includes(e.target.id)){
+        if(!activeTagList.includes(e.target.id)){
             setActiveTagList(state => [...state, e.target.id])
             // console.log(e.target.id)
-        }else if (inputText != '' && activeTagList.includes(e.target.id)){
+        }else if (activeTagList.includes(e.target.id)){
             delTag(e)
         }
     }
@@ -129,6 +131,7 @@ const Projects = () => {
     const clearInput = (e) => {
         setInputText('')
         setSuggestedTag('')
+        setActiveSearch(false)
     }
     
     useEffect(()=>{
@@ -158,6 +161,7 @@ const Projects = () => {
             <div className="search-tags-container">
                 <div className="suggestedTag">{suggestedTag}</div>
                 <TextField 
+                    onFocus={()=>setActiveSearch(true)}
                     inputProps={{ style: { color: "#fff", border: "#fff" } }} 
                     value={inputText} onChange={inputHandler} label="Filter by tag" variant="outlined" 
                     sx={{
@@ -194,7 +198,7 @@ const Projects = () => {
                     <AddIcon />
                 </IconButton>
                 <div className="search">
-                    {dataTags.length > 0 && inputText.length > 0 && (
+                    {dataTags.length > 0  && activeSearch && (
                     <div className="tags">
                         {dataTags.map((tag) => (
                             <p id={tag} onClick={pickTag} className={activeTagList.includes(tag) ? 'active' : ""}>

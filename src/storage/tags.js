@@ -1,7 +1,7 @@
 export const dataTags = [
     "typescript",
     "firebase",
-    "styledComponents",
+    "styled-components",
     "react",
     "redux",
     "js",
