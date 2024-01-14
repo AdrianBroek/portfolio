@@ -17,7 +17,7 @@ import karcher from '../images/projectsBackgrounds2/karcher.png'
 const dataProjects = [
     {
         name: 'PriceListApp',
-        description: 'Web application for easy matching of products to price lists. I did it for my job, we needed to setup pricelists to multiple products in short period of time. Project helped in this case with success.',
+        description: 'Web application for easy matching of products to price lists. I did it for my job, we needed to setup pricelists to multiple products in short period of time. Project helped in this case with success. Project is not 100% done',
         link: 'https://adrianbroek.github.io/priceList/',
         image: PriceListApp,
         backgroundColor: '#000',
@@ -65,7 +65,7 @@ const dataProjects = [
     },
     {
         name: 'Pajok - website',
-        description: 'Website made for freelance photographer. Used GraphQl - HyGraph for easy website editing. Website deployed on netlify. I created it.',
+        description: 'Website made for freelance photographer. Used GraphQl - HyGraph for easy website editing. Website deployed on netlify. I created it to learn GraphQL queries and mutations with Apollo & Hygraph backend. Used Google OAuth.',
         link: 'https://pajok.netlify.app/',
         image: pajokWebsite,
         backgroundColor: '#000',
@@ -75,6 +75,9 @@ const dataProjects = [
             'graphql', 
             'styled-components', 
             "framer-motion",
+            "google OAuth",
+            "netlify",
+            "apollo",
             "my-project"
         ]
     },

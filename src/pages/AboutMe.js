@@ -56,7 +56,7 @@ const About = () => {
             </div>
             <div className="rd">
                 <div className="board">
-                    <p>I'm frontend developer with almost 1 year of professional experience and about 3 years of formal/self taught expierience. </p>
+                    <p>I'm frontend developer with 1 year of professional experience and about 3 years of formal/self taught expierience. </p>
                     <div className="horizontal" />
                     <p>I started my web dev journey with IT technician degree in Poland, then I constantly gained new skills from online 
                         courses. Meanwhile I've been practicing my skills by building wep apps on my own.</p>

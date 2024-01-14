@@ -11,6 +11,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import ClearIcon from '@mui/icons-material/Clear';
 import { IconButton } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
+import Button from '@mui/material/Button';
+import SearchOffIcon from '@mui/icons-material/SearchOff';
 
 const Projects = () => {
     const {activeScroll, setActiveScroll} = useContext(StateContext)
@@ -133,6 +135,10 @@ const Projects = () => {
         setSuggestedTag('')
         setActiveSearch(false)
     }
+
+    function turnOffTagsPopup(){
+        setActiveSearch(false)
+    }
     
     useEffect(()=>{
         if(inView){
@@ -161,6 +167,7 @@ const Projects = () => {
             <div className="search-tags-container">
                 <div className="suggestedTag">{suggestedTag}</div>
                 <TextField 
+                    autocomplete="off"
                     onFocus={()=>setActiveSearch(true)}
                     inputProps={{ style: { color: "#fff", border: "#fff" } }} 
                     value={inputText} onChange={inputHandler} label="Filter by tag" variant="outlined" 
@@ -206,6 +213,9 @@ const Projects = () => {
                                 {tag}
                             </p>
                         ))}
+                        <Button sx={{width: '100%'}} onClick={turnOffTagsPopup} variant="outlined" endIcon={<SearchOffIcon />}>
+                        Cancel
+                        </Button>
                     </div>
                     )}
                 </div>
@@ -216,15 +226,6 @@ const Projects = () => {
                     <Project item={item} key={index} />
                 ))}
             </div>
-            {/* <br />
-            <br />
-            <br />
-            <h1 className="name">Professional projects</h1>
-            <div className="projectContainer">
-                {util.map((item, index)=> (
-                    <Project item={item} key={index} />
-                ))}
-            </div> */}
         </section>
     )
 }

@@ -66,7 +66,7 @@ const skillsData = [
     {
         name: 'graphql',
         icon: graphql,
-        info: "{ basic schema reading via query, nothing else }"
+        info: "{ mutation and queries with variables via Apollo/react query  }"
     },
     {
         name: 'framerMotion',
@@ -76,7 +76,6 @@ const skillsData = [
     {
         name: 'styledComponents',
         icon: styledComponents,
-        info: "{ Very handy when styling is not that important in a project }"
     },
     {
         name: 'MUI components',
