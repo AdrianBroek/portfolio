@@ -16,12 +16,15 @@
             position: relative;
             color: #fff;
         }
+        input {
+            text-transform: lowercase;
+        }
         button {
             margin: 1rem;
         }
         .suggestedTag {
             position: absolute;
-            top: 49%;
+            top: 43%;
             transform: translateY(-46%);
             left: 14px;
             font-family: "Roboto","Helvetica","Arial",sans-serif;

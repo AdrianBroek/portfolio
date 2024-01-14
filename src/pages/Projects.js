@@ -172,6 +172,7 @@ const Projects = () => {
                     inputProps={{ style: { color: "#fff", border: "#fff" } }} 
                     value={inputText} onChange={inputHandler} label="Filter by tag" variant="outlined" 
                     sx={{
+                        textTransform: 'lowercase',
                         width: 300,
                         '& .Mui-focused': {
                             color: '#fff',
