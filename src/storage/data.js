@@ -25,7 +25,6 @@ const dataProjects = [
         tags: [
             "react", 
             "redux", 
-            'jquery', 
             'scss', 
             "my-project"
         ]
