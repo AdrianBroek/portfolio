@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e2162e6.css",
-    "main.js": "/static/js/main.35b455f3.js",
+    "main.css": "/static/css/main.e398907b.css",
+    "main.js": "/static/js/main.cfbda12a.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/pajokWebsite.png": "/static/media/pajokWebsite.3e5adf4f0b490998700d.png",
     "static/media/namileo.png": "/static/media/namileo.8e898cdd92fa9a28bf6a.png",
     "static/media/karcher.png": "/static/media/karcher.a3cad04225e780af0525.png",
     "static/media/krawczykrental.png": "/static/media/krawczykrental.6f543d4265a7cb24c6d6.png",
     "static/media/ipomocni.png": "/static/media/ipomocni.d65d2b5801695f2fc83e.png",
+    "static/media/pajokWebsite.png": "/static/media/pajokWebsite.e4776ac7a5cf2d3afdf3.png",
     "static/media/blucar.png": "/static/media/blucar.ecb441139055a18c9bbc.png",
     "static/media/weatherApp.png": "/static/media/weatherApp.9e0721d94955df3f9516.png",
     "static/media/musicPlayer.png": "/static/media/musicPlayer.6f9a67ec8677e7146924.png",
@@ -16,6 +16,7 @@
     "static/media/graphQl.png": "/static/media/graphQl.fc6b9451733c620ceb86.png",
     "static/media/eCommerceApp.png": "/static/media/eCommerceApp.14d4df52f453ecdbf2d3.png",
     "static/media/PriceListApp.png": "/static/media/PriceListApp.ed2cfc4c5c4f9b038cdd.png",
+    "static/media/Nabthat.png": "/static/media/Nabthat.1b2f5999bcbc2fb72c47.png",
     "static/media/colorsProject.png": "/static/media/colorsProject.89b483eb5f75958f48f4.png",
     "static/media/firebase.png": "/static/media/firebase.225789392dc170212da3.png",
     "static/media/sass.png": "/static/media/sass.91714f748188b46f4e33.png",
@@ -42,12 +43,12 @@
     "static/media/maleavatar.webp": "/static/media/maleavatar.b93e6586ccd75c9f7952.webp",
     "static/media/redux.svg": "/static/media/redux.0e4fb1c819ac4c060c92343147d4ccf7.svg",
     "index.html": "/index.html",
-    "main.2e2162e6.css.map": "/static/css/main.2e2162e6.css.map",
-    "main.35b455f3.js.map": "/static/js/main.35b455f3.js.map",
+    "main.e398907b.css.map": "/static/css/main.e398907b.css.map",
+    "main.cfbda12a.js.map": "/static/js/main.cfbda12a.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e2162e6.css",
-    "static/js/main.35b455f3.js"
+    "static/css/main.e398907b.css",
+    "static/js/main.cfbda12a.js"
   ]
 }
