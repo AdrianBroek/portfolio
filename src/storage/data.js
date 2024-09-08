@@ -13,11 +13,26 @@ import namileo from '../images/projectsBackgrounds2/namileo.png'
 import iPomocni from '../images/projectsBackgrounds2/ipomocni.png'
 import blucar from '../images/projectsBackgrounds2/blucar.png'
 import karcher from '../images/projectsBackgrounds2/karcher.png'
+import nabthat from '../images/projectsBackgrounds2/Nabthat.png'
 
 const dataProjects = [
     {
+        name: 'Nabthat',
+        description: 'Project for junior frontend developer job recruitment, they ghosted me, so I add the project to my personal portfolio. Adding and modifying sentences, according to the selected option. Adding the sentence was my creative invention.  ',
+        link: 'https://nabthat-frontend-test-adrian-brozek.netlify.app/',
+        image: nabthat,
+        backgroundColor: '#000',
+        tags: [
+            "react", 
+            "redux", 
+            'jquery', 
+            'scss', 
+            "my-project"
+        ]
+    },
+    {
         name: 'PriceListApp',
-        description: 'Web application for easy matching of products to price lists. I did it for my job, we needed to setup pricelists to multiple products in short period of time. Project helped in this case with success. Project is not 100% done',
+        description: 'Web application for selecting products to the appropriate price list. I did it for my job, we needed to setup pricelists to multiple products in short period of time. Project helped in this case with success. Project is not 100% done',
         link: 'https://adrianbroek.github.io/priceList/',
         image: PriceListApp,
         backgroundColor: '#000',
@@ -230,6 +245,7 @@ const dataProjects = [
             'css', 
         ]
     },
+    
 ]
 
 export default dataProjects
