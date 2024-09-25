@@ -18,7 +18,7 @@ import nabthat from '../images/projectsBackgrounds2/Nabthat.png'
 const dataProjects = [
     {
         name: 'Nabthat',
-        description: 'Project for junior frontend developer job recruitment, they ghosted me, so I add the project to my personal portfolio. Adding and modifying sentences, according to the selected option. Adding the sentence was my creative invention.  ',
+        description: 'Project for junior frontend developer job recruitment. Adding and modifying sentences, according to the selected option.',
         link: 'https://nabthat-frontend-test-adrian-brozek.netlify.app/',
         image: nabthat,
         backgroundColor: '#000',
