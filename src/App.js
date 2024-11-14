@@ -17,35 +17,27 @@ import atom from './images/icons/atom.png'
 import htmlCoding from './images/icons/html-coding.png'
 import javaScript from './images/icons/java-script.png'
 import css from './images/icons/css-3.png'
+import Nav from './components/Nav';
 
 // Particles 
 import ParticleCanvas from './components/ParticleCanvas';
 
 function App() {
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-  return (
-    <StateProvider>
-      <ParticleCanvas />
-      <MainMenu />
-      <AboutMe />
-      <Skillset />
-      <Projects />
-      <Contact />
-      <div class="boxes">
-        <ul>
-          <li></li>
-          <li><img src={css}></img></li>
-          <li><img src={htmlCoding}></img></li>
-          <li></li>
-          <li></li>
-          <li><img src={atom}></img></li>
-        </ul>
-      </div>
-      
-    </StateProvider>
-  );
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+    return (
+      <StateProvider>
+        <ParticleCanvas />
+        {/* <Nav /> */}
+        <MainMenu />
+        <AboutMe />
+        <Skillset />
+        <Projects />
+        <Contact />
+        
+      </StateProvider>
+    );
 }
 
 export default App;

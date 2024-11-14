@@ -8,14 +8,27 @@ import develop from '../images/icons/develop.png'
 import projects from '../images/icons/setting.png'
 
 const MainMenu = () => {
-    const {active, setActive, scrollPos, activeScroll, setActiveScroll} = useContext(StateContext)
-    const [rotate, setRotate] = useState('0deg')
-    const [classCheck, setClassCheck] = useState()
-    const [hover, setHover] = useState()
-    const [borderChange, setBorderChange] = useState()
+    const {active, setActive, scrollPos, activeScroll, setActiveScroll} = useContext(StateContext);
+    const [rotate, setRotate] = useState('0deg');
+    const [classCheck, setClassCheck] = useState();
+    const [hover, setHover] = useState();
+    const [borderChange, setBorderChange] = useState();
     const [changePosition, setChangePosition] = useState(false);
-    const [height, setHeight] = useState()
-    const [changeCheck, setChangeCheck] = useState(false)
+    const [height, setHeight] = useState();
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        const icons = [user, phone, develop, projects];
+        const loadIcons = icons.map(src => {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.src = src;
+                img.onload = resolve;
+            });
+        });
+
+        Promise.all(loadIcons).then(() => setIsLoaded(true));
+    }, []);
 
     useEffect(() => {
         const container = document.querySelector('.item-container');
@@ -43,7 +56,7 @@ const MainMenu = () => {
                 setRotate('270deg')
                 break;
         }
-}, [activeScroll])
+    }, [activeScroll])
 
     useEffect(()=> {
         scrollPos >= 300 ? setChangePosition(true) : setChangePosition(false)  
@@ -115,23 +128,23 @@ const MainMenu = () => {
                     <a className="link" href='#projects'>Projects</a>
                 </div>
                 <div className="icons">
-                    {classCheck == 'st' && (
-                        <div className="iconContainer" >
+                    {isLoaded && classCheck === 'st' && (
+                        <div className="iconContainer">
                             <img className="icon user" src={user} />
                         </div>
                     )}
-                    {classCheck == 'sec' && (
-                        <div className="iconContainer" >
+                    {isLoaded && classCheck === 'sec' && (
+                        <div className="iconContainer">
                             <img className="icon dev" src={phone} />
                         </div>
                     )}
-                    {classCheck == 'rd' && (
-                        <div className="iconContainer" >
+                    {isLoaded && classCheck === 'rd' && (
+                        <div className="iconContainer">
                             <img className="icon pro" src={develop} />
                         </div>
                     )}
-                    {classCheck == 'th' && (
-                        <div className="iconContainer" >
+                    {isLoaded && classCheck === 'th' && (
+                        <div className="iconContainer">
                             <img className="icon phn" src={projects} />
                         </div>
                     )}

@@ -1,0 +1,16 @@
+#nav {
+    position: fixed;
+    top: 0;
+    left: -12px;
+    width: 70px;
+    height: 100%;
+    padding: 2rem;
+    z-index: 999;
+    border-radius: unset ;
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+        }
+    }
+}

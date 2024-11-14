@@ -1,3 +1,13 @@
+@import 'mainMenu';
+@import 'nav';
+@import 'aboutMe';
+@import 'skillset';
+@import 'projects';
+@import 'contact';
+@import 'skill';
+@import 'skillIcon';
+
+
 body {
   box-sizing: border-box;
   font-family: 'Teko', sans-serif;
@@ -139,23 +149,3 @@ p {
     animation: animate 11.5s linear 1s infinite;
   }
 }
-
-
-
-// @keyframes animate{
-//   from{
-//     transform: translateY(150vh) rotate(180deg)
-//   }
-//   to{
-//     transform: translateY(-150%)
-//       rotate(360deg)
-//   }
-// }
-
-@import 'mainMenu';
-@import 'aboutMe';
-@import 'skillset';
-@import 'projects';
-@import 'contact';
-@import 'skill';
-@import 'skillIcon';
