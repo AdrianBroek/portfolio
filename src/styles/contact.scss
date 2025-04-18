@@ -38,6 +38,8 @@
             font-size: 1.55rem;
             &::placeholder {
                 font-size: 1rem;
+                opacity:0;
+                transition: .25s ease-in-out;
             }
         }
         .fifty {
@@ -56,6 +58,19 @@
         .inputContainer {
             width: 100%;
             position: relative;
+            &:has(input:focus),
+            &:has(input:not(:placeholder-shown)),
+            &:has(textarea:focus),
+            &:has(textarea:not(:placeholder-shown)) {
+                .inputSpan {
+                    top: 5px;
+                    font-size: 1.1rem;
+                }
+                input::placeholder,
+                textarea::placeholder {
+                    opacity: 1;
+                }
+            }
             label {
                 background: transparent;
                 position: absolute;
@@ -67,7 +82,7 @@
                 font-size: 1rem;
                 span {
                     position: absolute;
-                    top: 30px;
+                    top: 33px;
                     left: 15px;
                     transition: all 0.3s ease 0s;
                     font-size: 0.9rem;
@@ -86,11 +101,6 @@
 
                 }
             }
-            input:focus + .inputLabel .inputSpan,
-            input:valid + .inputLabel .inputSpan {
-                top: 5px;
-                font-size: 1.1rem;
-            }
             input:-webkit-autofill + .inputLabel .inputSpan{
                 color: #2a2a2a !important;
             }
@@ -103,7 +113,7 @@
             min-width: calc(100% - 1rem);;
             max-width: 100%;
             max-height: 300px;
-            padding-top: 1rem;
+            padding-top: 2.2rem;
         }
         input, .send {
             height: 90px;
@@ -150,6 +160,9 @@
                 }
             }
 
+        }
+        .error {
+            color: #1976d2;
         }
     }
 }

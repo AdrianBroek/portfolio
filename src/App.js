@@ -11,6 +11,7 @@ import Skillset from './pages/Skillset'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import Skills from './pages/Skills'
+import ContactForm from './components/ContactForm';
 
 // icons
 import atom from './images/icons/atom.png'
@@ -34,8 +35,8 @@ function App() {
         <AboutMe />
         <Skillset />
         <Projects />
-        <Contact />
-        
+        {/* <Contact /> */}
+        <ContactForm />
       </StateProvider>
     );
 }

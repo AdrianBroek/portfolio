@@ -167,7 +167,7 @@ const Projects = () => {
             <div className="search-tags-container">
                 <div className="suggestedTag">{suggestedTag}</div>
                 <TextField 
-                    autocomplete="off"
+                    autoComplete="off"
                     onFocus={()=>setActiveSearch(true)}
                     inputProps={{ style: { color: "#fff", border: "#fff" } }} 
                     value={inputText} onChange={inputHandler} label="Filter by tag" variant="outlined" 
@@ -223,7 +223,7 @@ const Projects = () => {
             </div>
 
             <div className="projectContainer">
-                {storage.map((item, index)=> (
+                {storage.map((item, index) => (
                     <Project item={item} key={index} />
                 ))}
             </div>

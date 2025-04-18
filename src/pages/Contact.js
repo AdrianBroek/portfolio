@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser';
 import { useInView } from 'react-intersection-observer';
 import StateContext from "../components/StateContext";
 // icons
-import paperplane from '../images/icons/paper-plane.png'
 import email from '../images/icons/email.png'
 import phone from '../images/icons/telephone.png'
 // mui
@@ -14,6 +13,8 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
+// form
+import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
     const {activeScroll, setActiveScroll} = useContext(StateContext)
@@ -36,6 +37,7 @@ const Contact = () => {
     }, [inView])
 
     function mailChange(e) {
+        console.log(e.target.value)
         if (e.target.value == 0) {
             e.target.parentNode.children[1].children[0].style.top='30px'
             e.target.parentNode.children[1].children[0].style.fontSize='1.5rem'
@@ -56,23 +58,24 @@ const Contact = () => {
         }
     
         setOpen(false);
-      };
+    };
 
     // button
     function handleClick() {
-
         setLoading(true);
-        console.log('click')
+        // console.log('click')
     }
 
     // form
     const api_key = process.env.REACT_APP_MAIL_KEY
+    const service_key = process.env.REACT_APP_SERVICE_ID
+    const template_key = process.env.REACT_APP_TEMPLATE_ID
     const form = useRef();
 
     const sendEmail = (e) => {
         setLoading(true)
         e.preventDefault();
-        emailjs.sendForm('service_lszkfl4', 'template_o44dgag', form.current, api_key)
+        emailjs.sendForm(service_key, template_key, form.current, api_key)
         .then((result) => {
             setLoading(false)
             setOpen(true)
@@ -82,9 +85,10 @@ const Contact = () => {
             setLoading(false)
             setOpen(true)
             setError(true)
-            console.log(error.text);
+            // console.log(error.text);
         });
-        e.target.reset();
+        console.log(form.current)
+        // e.target.reset();
     }
 
     return (
@@ -163,9 +167,8 @@ const Contact = () => {
                         </Alert>
                     </Snackbar>
                 )}
-                
-
             </form>
+            <ContactForm />
         </section>
     )
 

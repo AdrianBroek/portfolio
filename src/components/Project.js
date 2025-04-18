@@ -21,8 +21,8 @@ const Project = ({item, index}) => {
                 <div className="tags"
                 style={{display: "flex", flexWrap: "wrap"}}
                 >
-                {item.tags ? item.tags.map((tag)=> (
-                    <p className={tag == "my-project" ? "my-project" : ""}>
+                {item.tags ? item.tags.map((tag, index)=> (
+                    <p key={index} className={tag == "my-project" ? "my-project" : ""}>
                         <img style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="18px" src={tags} />
                         {tag}
                     </p>

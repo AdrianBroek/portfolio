@@ -12,8 +12,8 @@ const Skills = () => {
                 <p>Hover for more details</p>
             </div>
             <div className="icon-container">
-                {data.map((item)=> (
-                    <SkillIcon props={item}/>
+                {data.map((item, index)=> (
+                    <SkillIcon key={index} props={item}/>
                 ))}
             </div>
         </section>
