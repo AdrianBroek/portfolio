@@ -44,13 +44,13 @@ const dataProjects = [
         image: ToDoList,
         backgroundColor: '#000'
     },
-    {
-        name: 'MusicPlayerApp',
-        description: 'Music player w/ react, sass',
-        link: 'https://adrianbroek.github.io/musicPlayer/',
-        image: MusicPlayer,
-        backgroundColor: '#000'
-    },
+    // {
+    //     name: 'MusicPlayerApp',
+    //     description: 'Music player w/ react, sass',
+    //     link: 'https://adrianbroek.github.io/musicPlayer/',
+    //     image: MusicPlayer,
+    //     backgroundColor: '#000'
+    // },
     {
         name: 'Colors',
         description: 'Pick your fav color and keep it with local storage library!',

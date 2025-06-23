@@ -121,19 +121,19 @@ const dataProjects = [
             "course-project"
         ]
     },
-    {
-        name: 'MusicPlayerApp',
-        description: 'Music player w/ react, sass',
-        link: 'https://adrianbroek.github.io/musicPlayer/',
-        image: MusicPlayer,
-        backgroundColor: '#000',
-        tags: [
-            "html", 
-            'css', 
-            'js', 
-            "course-project"
-        ]
-    },
+    // {
+    //     name: 'MusicPlayerApp',
+    //     description: 'Music player w/ react, sass',
+    //     link: 'https://adrianbroek.github.io/musicPlayer/',
+    //     image: MusicPlayer,
+    //     backgroundColor: '#000',
+    //     tags: [
+    //         "html", 
+    //         'css', 
+    //         'js', 
+    //         "course-project"
+    //     ]
+    // },
     {
         name: 'Colors',
         description: 'Pick your fav color and keep it with local storage library!',
