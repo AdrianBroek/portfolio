@@ -2,11 +2,12 @@ import weatherApp from '../images/projectsBackgrounds/weatherApp.png'
 import beatmaker from '../images/projectsBackgrounds/beatmaker.png'
 import ToDoList from '../images/projectsBackgrounds/todo.png'
 import MusicPlayer from '../images/projectsBackgrounds/musicPlayer.png'
+import scandiwebscr from '../images/projectsBackgrounds/ScandiWebScr.webp'
 import colorsProject from '../images/projectsBackgrounds/colorsProject.png'
 import calculator from '../images/projectsBackgrounds/calculator.png'
 import flappyBird from '../images/projectsBackgrounds/flappyBird.png'
 import eCommerceApp from '../images/projectsBackgrounds/eCommerceApp.png'
-import PriceListApp from '../images/projectsBackgrounds/PriceListApp.png'
+import PriceListApp from '../images/projectsBackgrounds/pricelistapp.webp'
 import pajokWebsite from '../images/projectsBackgrounds2/pajokWebsite.png'
 import krawczykrental from '../images/projectsBackgrounds2/krawczykrental.png'
 import namileo from '../images/projectsBackgrounds2/namileo.png'
@@ -27,6 +28,25 @@ const dataProjects = [
             "redux", 
             'scss', 
             "my-project"
+        ]
+    },
+        {
+        name: 'ScandiWeb',
+        description: "Project for a Junior React Developer position at Scandiweb, developed 100% according to the Figma design. It includes custom additions such as skeleton loaders, modals, tooltips.",
+        link: 'https://adrian-brozek-scandiwebprojectecommerce-1.onrender.com/',
+        image: scandiwebscr,
+        backgroundColor: '#000',
+        tags: [
+            "html", 
+            'scss', 
+            'react',
+            'redux', 
+            'graphql',
+            "apollo",
+            "styled-components",
+            "my-project",
+            "figma",
+            "fullstack"
         ]
     },
     {
@@ -134,6 +154,7 @@ const dataProjects = [
     //         "course-project"
     //     ]
     // },
+
     {
         name: 'Colors',
         description: 'Pick your fav color and keep it with local storage library!',

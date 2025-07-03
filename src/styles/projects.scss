@@ -80,6 +80,7 @@
             transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
             transition: 0.3s ease all;
             border-radius: 2rem;
+            height: fit-content;
             &:hover {
                 transform: perspective(800px) rotateY(0deg) translateY(-5px)
                 rotateX(0deg) scale(1);
