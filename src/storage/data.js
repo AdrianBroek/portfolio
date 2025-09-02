@@ -19,7 +19,7 @@ import nabthat from '../images/projectsBackgrounds2/Nabthat.png'
 const dataProjects = [
     {
         name: 'Nabthat',
-        description: 'Project for junior frontend developer job recruitment. Adding and modifying sentences, according to the selected option.',
+        description: 'A recruitment project prepared for NabThat as part of a junior frontend developer application. The base task required handling sentence modifications depending on selected options. On top of that, I extended the project with my own features: adding, deleting, and editing sentences, as well as interactive alerts that display contextual messages and icons for each user action.',
         link: 'https://nabthat-frontend-test-adrian-brozek.netlify.app/',
         image: nabthat,
         backgroundColor: '#000',
@@ -32,7 +32,7 @@ const dataProjects = [
     },
         {
         name: 'ScandiWeb',
-        description: "Project for a Junior React Developer position at Scandiweb, developed 100% according to the Figma design. It includes custom additions such as skeleton loaders, modals, tooltips.",
+        description: 'The app is hosted on Render.com, so it may require a few refreshes to fully load. A fullstack recruitment project for a Junior React Developer position at Scandiweb, built entirely according to the provided Figma design. In addition to the core requirements, I implemented custom features such as skeleton loaders, modals, and tooltips to improve user experience. Built with React Class, Redux, GraphQL (Apollo), and styled-components.',
         link: 'https://adrian-brozek-scandiwebprojectecommerce-1.onrender.com/',
         image: scandiwebscr,
         backgroundColor: '#000',
@@ -61,12 +61,13 @@ const dataProjects = [
             "typescript", 
             "firebase", 
             "styled-components",
-            "my-project"
+            "my-project",
+            "fullstack"
         ]
     },
     {
         name: 'eCommerceApp',
-        description: 'Online store, with user account, basket, blog, categories, orders. I made it to learn redux with react. It is 100% my project, did not copy it from the internet. ',
+        description: 'Online store, with user account, basket, blog, categories, orders. I made it to learn redux with react.',
         link: 'https://adrianbroek.github.io/eCommerceApp/',
         image: eCommerceApp,
         backgroundColor: '#000',
@@ -84,7 +85,7 @@ const dataProjects = [
     },
     {
         name: 'WeatherApp',
-        description: 'Weather app on react. Used API via Axios. I created it, to learn react with use-context api and axios. 100% my project.',
+        description: 'A 3-day weather forecast application built with React Hooks and Context API. It features a city search covering worldwide locations, a data-driven weather slider, and an interactive Leaflet map. The app integrates external weather APIs via Axios, styled with SCSS, and was created to strengthen my skills in state management, API integration, and modern frontend development.',
         link: 'https://adrianbroek.github.io/weatherApp/',
         image: weatherApp,
         backgroundColor: '#000',
@@ -99,7 +100,7 @@ const dataProjects = [
     },
     {
         name: 'Pajok - website',
-        description: 'Website made for freelance photographer. Used GraphQl - HyGraph for easy website editing. Website deployed on netlify. I created it to learn GraphQL queries and mutations with Apollo & Hygraph backend. Used Google OAuth.',
+        description: 'A portfolio website built for a freelance photographer, designed with React and styled-components. The site uses Hygraph (GraphQL CMS) for easy content management, with queries and mutations handled through Apollo. It also supports Google OAuth authentication and is deployed on Netlify. This project helped me gain hands-on experience with GraphQL, headless CMS integration, and modern frontend development practices.',
         link: 'https://pajok.netlify.app/',
         image: pajokWebsite,
         backgroundColor: '#000',
@@ -112,12 +113,13 @@ const dataProjects = [
             "google OAuth",
             "netlify",
             "apollo",
-            "my-project"
+            "my-project",
+            "fullstack"
         ]
     },
     {
         name: 'Beatmaker',
-        description: 'Project to train javascript vanilla with ES6 classes objects. DJ some sounds',
+        description: 'Course project to master OOP javascript vanilla with ES6 classes objects. DJ some sounds',
         link: 'https://adrianbroek.github.io/beatmaker/beatmaker%20done/',
         image: beatmaker,
         backgroundColor: '#000',
@@ -157,7 +159,7 @@ const dataProjects = [
 
     {
         name: 'Colors',
-        description: 'Pick your fav color and keep it with local storage library!',
+        description: 'A simple web app that allows users to pick their favorite colors and save them to a personal library using Local Storage. Built with vanilla JavaScript, HTML, and CSS, this project helped me practice DOM manipulation, state persistence, and working without external frameworks.',
         link: 'https://adrianbroek.github.io/Colors/',
         image: colorsProject,
         backgroundColor: '#000',
@@ -168,19 +170,19 @@ const dataProjects = [
             "course-project"
         ]
     },
-    {
-        name: 'Calculator',
-        description: 'Simple calculator made in html, css, Js',
-        link: 'https://adrianbroek.github.io/Calculator/',
-        image: calculator,
-        backgroundColor: '#000',
-        tags: [
-            "html", 
-            'css', 
-            'js', 
-            "my-project"
-        ]
-    },
+    // {
+    //     name: 'Calculator',
+    //     description: 'Simple calculator made in html, css, Js',
+    //     link: 'https://adrianbroek.github.io/Calculator/',
+    //     image: calculator,
+    //     backgroundColor: '#000',
+    //     tags: [
+    //         "html", 
+    //         'css', 
+    //         'js', 
+    //         "my-project"
+    //     ]
+    // },
     {
         name: 'FlappyBird game',
         description: 'Made in javascript canvas',
@@ -196,7 +198,7 @@ const dataProjects = [
     },
     {
         name: 'KrawczykRental',
-        description: 'Webstore made in prestashop. That was my personal project in my junior frontend job',
+        description: 'An e-commerce store built with PrestaShop. As a junior frontend developer, I worked on customizing templates, editing and optimizing code, implementing interactive events, and ensuring responsive design (RWD). The project also involved working with Smarty templates, SCSS, and Docker for local development.',
         link: 'https://krawczykrental.pl/',
         image: krawczykrental,
         backgroundColor: '#000',
@@ -212,7 +214,7 @@ const dataProjects = [
     },
     {
         name: 'KarcherCenterKrawczyk',
-        description: 'Webstore made in prestashop. I was working on this website during my junior frontend job.',
+        description: 'An online store developed with PrestaShop. My responsibilities included template customization, code editing and optimization, adding custom events, and improving responsiveness across devices. This role strengthened my skills in frontend development within an e-commerce environment.',
         link: 'https://karchercenter-krawczyk.pl/',
         image: karcher,
         backgroundColor: '#000',
@@ -227,7 +229,7 @@ const dataProjects = [
     },
     {
         name: 'Namileo',
-        description: 'Webstore made in prestashop. ',
+        description: 'A PrestaShop-based e-commerce store where I contributed as a junior frontend developer. I was responsible for editing and optimizing templates, improving site responsiveness (RWD), and adding interactive features to enhance user experience.',
         link: 'https://namileo.com/',
         image: namileo,
         backgroundColor: '#000',
@@ -242,7 +244,7 @@ const dataProjects = [
     },
     {
         name: 'iPomocni',
-        description: 'Webstore made in Wordpress mostly via creative elements. I recreated this website in wp, during my junior frontend job.',
+        description: 'Webstore made in Wordpress mostly via creative elements. I recreated this website in wordpress, during my junior frontend job.',
         link: 'https://ipomocni.pl/',
         image: iPomocni,
         backgroundColor: '#000',
@@ -254,7 +256,7 @@ const dataProjects = [
     },
     {
         name: 'Blucar',
-        description: 'Webstore made in Wordpress. I was working on this site in my junior frontend job. Made landingpage in acf, used js, html, css and php tag.',
+        description: 'A WordPress-based website I contributed to during my junior frontend role. My work focused on implementing changes and updates, including building a landing page with ACF, and customizing layouts using HTML, CSS, JavaScript, and PHP tags.',
         link: 'https://blucar.pl/slub/',
         image: blucar,
         backgroundColor: '#000',

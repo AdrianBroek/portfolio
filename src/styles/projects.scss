@@ -1,11 +1,31 @@
 .projects {
+    .name {
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+    }
+    .projectCounter {
+        column-gap: 3rem;
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            p {
+                text-align: center;
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+        }
+    }
     .active-tags {
         display: flex;
         flex-wrap: wrap;
         position: relative;
         color: #fff;
         cursor: pointer;
-        margin-bottom: 1rem;
+        margin: 2rem 0;
         min-height: 30px;
     }
     .search-tags-container {
@@ -97,7 +117,10 @@
                     
                 }
                 .description {
+                    height: 150px;
+                    min-height: 150px;
                     padding: 1rem;
+                    overflow: hidden;
                     h2 {
                         font-size: 2rem;
                     }
@@ -150,7 +173,7 @@
                 .projectDesc {
                    
                     .description {
-                        
+                        height: auto !important;
                         h2 {
                             
                         }

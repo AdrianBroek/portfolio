@@ -13,6 +13,8 @@ import { IconButton } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import SearchOffIcon from '@mui/icons-material/SearchOff';
+import Counter from '../components/CounterComponent';
+import { AnimatePresence } from "framer-motion";
 
 const Projects = () => {
     const {activeScroll, setActiveScroll} = useContext(StateContext)
@@ -45,7 +47,6 @@ const Projects = () => {
             if (matchingTags.length > 0) {
                 const suggestedTag = matchingTags[0];
                 setSuggestedTag(suggestedTag);
-                // Tutaj możesz zrobić coś z sugerowanym tagiem, np. przypisać go do stanu, itp.
             } else {
                 setSuggestedTag('')
             }
@@ -88,12 +89,6 @@ const Projects = () => {
         }
         
     }
-
-    // setStorage if filteredStorage changes
-    useEffect(()=> {
-        setStorage(filteredStorage)
-        // console.log(filteredStorage)
-    },[filteredStorage])
 
     // fire filterProjectsByTagName function on activetaglist change
     useEffect(()=> {
@@ -151,12 +146,18 @@ const Projects = () => {
 
     return (
         <section id="projects" ref={ref} className="projects container">
-            <h1 className="name">Projects</h1>
+            <h1 className="name">
+                Projects
+                <AnimatePresence mode="wait">
+                    {(activeScroll === 'projects' || activeScroll === '') && <Counter/>}
+                </AnimatePresence>
+            </h1>
+
             <div className="active-tags">
             {activeTagList.length > 0 && (
                 <>
-                {activeTagList.map((tag) => (
-                    <p id={tag} onClick={delTag} className={activeTagList.includes(tag) ? "active" : ""}>
+                {activeTagList.map((tag, ind) => (
+                    <p id={tag} onClick={delTag} key={ind} className={activeTagList.includes(tag) ? "active" : ""}>
                         <img style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
                         {tag}
                     </p>
@@ -208,8 +209,8 @@ const Projects = () => {
                 <div className="search">
                     {dataTags.length > 0  && activeSearch && (
                     <div className="tags">
-                        {dataTags.map((tag) => (
-                            <p id={tag} onClick={pickTag} className={activeTagList.includes(tag) ? 'active' : ""}>
+                        {dataTags.map((tag, ind) => (
+                            <p id={tag} onClick={pickTag} key={ind} className={activeTagList.includes(tag) ? 'active' : ""}>
                                 <img  style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
                                 {tag}
                             </p>
@@ -221,7 +222,8 @@ const Projects = () => {
                     )}
                 </div>
             </div>
-
+            
+            {/* Projekty */}
             <div className="projectContainer">
                 {storage.map((item, index) => (
                     <Project item={item} key={index} />
