@@ -11,8 +11,8 @@ const Project = ({item, index}) => {
         <>
         {item && (
         <article className="project"
-            // onMouseEnter={() => setHovered(true)}
-            // onMouseLeave={() => setHovered(false)}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
         >
             {/* <div className="overlay"></div> */}
             <a target="blank" href={item.link} className="style projectDesc">
