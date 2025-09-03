@@ -11,7 +11,6 @@ export const dataTags = [
     "framer-motion",
     "context-api",
     "graphql",
-    "styled-components",
     "html",
     "css",
     "wordpress",

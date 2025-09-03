@@ -85,6 +85,7 @@ const Projects = () => {
             objectsToRemove.forEach((element)=> {
                 FScopy = FScopy.filter((item) => item.name != element.name);
             })
+            console.log(FScopy)
             setFilteredStorage(FScopy)
         }
         
@@ -156,8 +157,8 @@ const Projects = () => {
             <div className="active-tags">
             {activeTagList.length > 0 && (
                 <>
-                {activeTagList.map((tag, ind) => (
-                    <p id={tag} onClick={delTag} key={ind} className={activeTagList.includes(tag) ? "active" : ""}>
+                {activeTagList.map((tag, index) => (
+                    <p id={tag} key={index} onClick={delTag} className={activeTagList.includes(tag) ? "active" : ""}>
                         <img style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
                         {tag}
                     </p>
@@ -208,24 +209,24 @@ const Projects = () => {
                 </IconButton>
                 <div className="search">
                     {dataTags.length > 0  && activeSearch && (
-                    <div className="tags">
-                        {dataTags.map((tag, ind) => (
-                            <p id={tag} onClick={pickTag} key={ind} className={activeTagList.includes(tag) ? 'active' : ""}>
-                                <img  style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
-                                {tag}
-                            </p>
-                        ))}
-                        <Button sx={{width: '100%'}} onClick={turnOffTagsPopup} variant="outlined" endIcon={<SearchOffIcon />}>
-                        Cancel
-                        </Button>
-                    </div>
+                        <div className="tags">
+                            {dataTags.map((tag, ind) => (
+                                <p id={tag} onClick={pickTag} key={ind} className={activeTagList.includes(tag) ? 'active' : ""}>
+                                    <img style={{filter: "invert(38%) sepia(51%) saturate(2948%) hue-rotate(176deg) brightness(91%) contrast(101%)", margin: "0 7px"}} width="15px" src={tags} />
+                                    {tag}
+                                </p>
+                            ))}
+                            <Button sx={{width: '100%'}} onClick={turnOffTagsPopup} variant="outlined" endIcon={<SearchOffIcon />}>
+                            Cancel
+                            </Button>
+                        </div>
                     )}
                 </div>
             </div>
             
             {/* Projekty */}
             <div className="projectContainer">
-                {storage.map((item, index) => (
+                {filteredStorage.map((item, index) => (
                     <Project item={item} key={index} />
                 ))}
             </div>
