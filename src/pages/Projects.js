@@ -85,7 +85,6 @@ const Projects = () => {
             objectsToRemove.forEach((element)=> {
                 FScopy = FScopy.filter((item) => item.name != element.name);
             })
-            console.log(FScopy)
             setFilteredStorage(FScopy)
         }
         

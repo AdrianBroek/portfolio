@@ -4,9 +4,6 @@ import {motion} from 'framer-motion'
 
 const Project = ({item, index}) => {
     const [hovered, setHovered] = useState(false);
-    useEffect(()=> {
-        console.log(hovered)
-    } , [hovered])
     return (
         <>
         {item && (
