@@ -51,7 +51,7 @@ const dataProjects = [
     },
     {
         name: 'PriceListApp',
-        description: 'Web application for selecting products to the appropriate price list. I did it for my job, we needed to setup pricelists to multiple products in short period of time. Project helped in this case with success. Project is not 100% done',
+        description: 'A fullstack web application built with React, Redux, TypeScript, Styled-Components, and Firebase (authentication, database, and hosting). The app allows selecting products and assigning them to the appropriate price lists efficiently, which was crucial for my team to set up multiple price lists in a short time. Although the project is not fully completed, it successfully demonstrates my skills in frontend and backend integration, state management, and building user-friendly interfaces.',
         link: 'https://adrianbroek.github.io/priceList/',
         image: PriceListApp,
         backgroundColor: '#000',
